@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "max_retries": 2,
+  "max_clarifications": 2,
+  "fallback_action": "safe_fallback",
+  "fallback_message": "I'm having difficulty understanding the response. We can move to the next question or continue this question later.",
+  "rules": {
+    "repeated_audio_failure": "safe_fallback",
+    "repeated_missing_answer": "safe_fallback",
+    "repeated_unclear_answer": "safe_fallback",
+    "unsupported_language": "safe_fallback"
+  }
+}

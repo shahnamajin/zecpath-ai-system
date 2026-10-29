@@ -1,0 +1,46 @@
+{
+  "dataset_name": "Zecpath Answer Intent Definitions",
+  "version": "1.0.0",
+  "intents": [
+    {
+      "intent": "introduction",
+      "description": "Candidate provides personal or professional introduction."
+    },
+    {
+      "intent": "education",
+      "description": "Candidate provides educational qualification or specialization."
+    },
+    {
+      "intent": "experience",
+      "description": "Candidate describes work, internship, or project experience."
+    },
+    {
+      "intent": "skills",
+      "description": "Candidate mentions technical or professional skills."
+    },
+    {
+      "intent": "availability",
+      "description": "Candidate provides joining or availability information."
+    },
+    {
+      "intent": "salary_expectation",
+      "description": "Candidate provides salary or compensation expectation."
+    },
+    {
+      "intent": "location",
+      "description": "Candidate discusses work location or relocation."
+    },
+    {
+      "intent": "off_topic",
+      "description": "Candidate response is unrelated to the screening question."
+    },
+    {
+      "intent": "vague",
+      "description": "Candidate provides an answer without enough meaningful detail."
+    },
+    {
+      "intent": "missing",
+      "description": "Candidate provides no meaningful response."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "CONF_001",
+    "text": "I have worked with Python and Flask for two years. I built APIs and deployed applications.",
+    "expected": "confident"
+  },
+  {
+    "id": "CONF_002",
+    "text": "Um, I think maybe I worked on some projects, but I'm not sure.",
+    "expected": "uncertain"
+  },
+  {
+    "id": "CONF_003",
+    "text": "I worked worked on a Python project and I handled the backend backend.",
+    "expected": "repetition"
+  },
+  {
+    "id": "CONF_004",
+    "text": "I don't know. Maybe I can do it.",
+    "expected": "uncertain"
+  },
+  {
+    "id": "CONF_005",
+    "text": "I have two years of experience. I have five years of experience.",
+    "expected": "contradiction"
+  }
+]

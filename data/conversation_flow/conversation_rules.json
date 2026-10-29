@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "rules": {
+    "silence": {
+      "first_attempt": "retry",
+      "second_attempt": "fallback",
+      "maximum_retries": 2
+    },
+    "confusion": {
+      "first_attempt": "clarify",
+      "second_attempt": "fallback",
+      "maximum_clarifications": 2
+    },
+    "repeated_answer": {
+      "first_attempt": "clarify",
+      "second_attempt": "fallback",
+      "maximum_repeats": 2
+    },
+    "valid_answer": {
+      "action": "next_question"
+    }
+  }
+}

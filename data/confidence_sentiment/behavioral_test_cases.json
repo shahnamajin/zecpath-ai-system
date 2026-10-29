@@ -1,0 +1,36 @@
+{
+  "dataset_name": "Zecpath Behavioral Signal Test Dataset",
+  "version": "1.0.0",
+  "test_cases": [
+    {
+      "test_id": "BEHAV_001",
+      "text": "I am confident that I can work with Python and SQL.",
+      "expected_sentiment": "positive",
+      "expected_uncertainty": false
+    },
+    {
+      "test_id": "BEHAV_002",
+      "text": "Um, I think maybe I can work with Python.",
+      "expected_sentiment": "neutral",
+      "expected_uncertainty": true
+    },
+    {
+      "test_id": "BEHAV_003",
+      "text": "I don't know much about Java and I have no experience with it.",
+      "expected_sentiment": "negative",
+      "expected_uncertainty": true
+    },
+    {
+      "test_id": "BEHAV_004",
+      "text": "I have two years of Python experience.",
+      "expected_sentiment": "neutral",
+      "expected_uncertainty": false
+    },
+    {
+      "test_id": "BEHAV_005",
+      "text": "Um, uh, I worked on a project.",
+      "expected_sentiment": "neutral",
+      "expected_uncertainty": false
+    }
+  ]
+}

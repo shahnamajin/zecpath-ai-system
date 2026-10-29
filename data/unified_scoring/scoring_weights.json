@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "default_weights": {
+    "ats": 0.40,
+    "screening": 0.25,
+    "hr_interview": 0.35
+  },
+  "score_range": {
+    "minimum": 0,
+    "maximum": 100
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "candidate_types": [
+    {
+      "id": "fresher",
+      "name": "Fresher",
+      "description": "Candidate with limited or no professional industry experience."
+    },
+    {
+      "id": "experienced",
+      "name": "Experienced",
+      "description": "Candidate with previous professional industry experience."
+    }
+  ],
+  "role_types": [
+    {
+      "id": "technical",
+      "name": "Technical",
+      "description": "Technical roles such as Python Developer, Java Developer and Software Engineer."
+    },
+    {
+      "id": "non_technical",
+      "name": "Non-Technical",
+      "description": "Non-technical roles such as HR, Marketing, Sales and Operations."
+    }
+  ],
+  "example_roles": {
+    "technical": [
+      "Python Developer",
+      "Java Developer",
+      "Software Engineer",
+      "Data Analyst",
+      "Data Scientist"
+    ],
+    "non_technical": [
+      "HR Executive",
+      "Marketing Executive",
+      "Sales Executive",
+      "Business Development Executive",
+      "Operations Executive"
+    ]
+  }
+}

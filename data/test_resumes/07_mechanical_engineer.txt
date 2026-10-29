@@ -1,0 +1,25 @@
+Karthik Subramaniam
+Mechanical Design Engineer
+
+karthik.s@example.com | +91 90000 11223 | Coimbatore
+
+OBJECTIVE
+Mechanical engineer with 5 years experience in product design and CAD for automotive components.
+
+WORK EXPERIENCE
+Design Engineer, Ashok Leyland (2020 - Present)
+- Designed chassis components using CATIA V5; reduced material cost by 12% through DFM analysis.
+- Coordinated with vendors for prototype tooling and validation testing.
+
+Graduate Engineer Trainee, TVS Motor Company (2018 - 2020)
+- Assisted in FEA simulations for suspension systems using ANSYS.
+
+EDUCATION
+B.E. Mechanical Engineering, PSG College of Technology, 2018
+
+CERTIFICATIONS
+Certified SolidWorks Professional (CSWP)
+Six Sigma Green Belt
+
+TECHNICAL SKILLS
+CATIA, SolidWorks, ANSYS, GD&T, DFM/DFA, AutoCAD, Product Lifecycle Management (PLM)

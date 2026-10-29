@@ -1,0 +1,33 @@
+{
+    "candidate_id": "CAND-7E1F17D4",
+    "job_id": "JOB-1001",
+    "scores": {
+        "skills": 40,
+        "education": 20,
+        "projects": 20,
+        "experience": 0,
+        "certifications": 10
+    },
+    "overall_score": 90,
+    "matched_skills": [
+        "python",
+        "sql",
+        "git",
+        "rest apis",
+        "django"
+    ],
+    "missing_skills": [],
+    "recommendation": "Shortlist",
+    "score_breakdown": {
+        "skills": "5/5 required skills matched.",
+        "education": "Education details found.",
+        "projects": "2 project(s) identified.",
+        "experience": "No professional experience found.",
+        "certifications": "3 certification(s) identified."
+    },
+    "ai_metadata": {
+        "model": "ATS Scorer V2",
+        "version": "2.0",
+        "processed_at": "2026-08-05T18:26:04.284141"
+    }
+}

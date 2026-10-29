@@ -1,0 +1,22 @@
+{
+    "job_id": "JOB-1001",
+    "title": "Backend Python Developer",
+
+    "required_skills": [
+        "Python",
+        "SQL",
+        "Git",
+        "REST APIs",
+        "Django"
+    ],
+
+    "preferred_skills": [
+        "Docker",
+        "AWS",
+        "Kubernetes"
+    ],
+
+    "minimum_education": "Bachelor",
+
+    "minimum_experience": 0
+}

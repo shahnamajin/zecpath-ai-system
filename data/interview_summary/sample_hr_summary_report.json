@@ -1,0 +1,40 @@
+{
+  "candidate": {
+    "candidate_id": "CAND_1001",
+    "job_id": "JOB_2001",
+    "session_id": "HR_SESSION_039",
+    "job_title": "Python Developer"
+  },
+  "overall_performance": {
+    "hr_score": 89.02,
+    "aptitude_logic_score": 72.12,
+    "communication_score": 88.0,
+    "confidence_score": 84.0,
+    "consistency_score": 93.6,
+    "summary_score": 85.35
+  },
+  "insights": {
+    "strengths": [
+      "Strong overall HR interview performance",
+      "Clear and structured communication",
+      "Consistent confidence signals",
+      "Consistent responses across evaluated answers",
+      "Demonstrates observable reasoning and problem-solving structure"
+    ],
+    "weaknesses": [],
+    "cultural_fit_indicators": [
+      "Team collaboration is referenced in responses"
+    ],
+    "risk_flags": [
+      "One or more response inconsistencies require review"
+    ],
+    "inconsistencies": [
+      {
+        "question_id": "HR_EXP_001",
+        "detail": "Experience duration differs from another response."
+      }
+    ]
+  },
+  "natural_language_summary": "CAND_1001 completed the AI-assisted HR interview for Python Developer. The supplied analysis indicates an overall performance score of 85.35/100. Key observed strengths include Strong overall HR interview performance; Clear and structured communication; Consistent confidence signals. Cultural-fit indicators observed in the supplied responses include Team collaboration is referenced in responses. 1 response inconsistency requires review against the underlying interview evidence. Automated risk review: One or more response inconsistencies require review.",
+  "disclaimer": "Summary reflects the supplied AI analysis and should be reviewed with the underlying interview evidence."
+}

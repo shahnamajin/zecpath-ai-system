@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "scenarios": [
+    {
+      "scenario_id": "SJT_001",
+      "category": "team_conflict",
+      "difficulty": "medium",
+      "scenario": "Two team members disagree about the implementation approach and the disagreement is delaying the project. What would you do?",
+      "ideal_structure": [
+        "Understand both viewpoints",
+        "Identify the project requirement",
+        "Compare evidence and trade-offs",
+        "Agree on an actionable approach",
+        "Follow up on the outcome"
+      ],
+      "evaluation_dimensions": {
+        "problem_identification": 0.2,
+        "reasoning": 0.3,
+        "decision_quality": 0.25,
+        "communication_clarity": 0.15,
+        "actionability": 0.1
+      }
+    },
+    {
+      "scenario_id": "SJT_002",
+      "category": "deadline_pressure",
+      "difficulty": "hard",
+      "scenario": "A critical deadline is approaching and you discover that one required task is incomplete. How would you respond?",
+      "ideal_structure": [
+        "Assess remaining work",
+        "Identify critical path",
+        "Communicate risk",
+        "Prioritize essential work",
+        "Create a realistic recovery plan",
+        "Verify completion"
+      ],
+      "evaluation_dimensions": {
+        "problem_identification": 0.2,
+        "reasoning": 0.3,
+        "decision_quality": 0.25,
+        "communication_clarity": 0.15,
+        "actionability": 0.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "company": "Paytm",
+  "designation": "Software Engineer",
+  "duration": "3 Years",
+  "technologies": [
+    "Python",
+    "Docker",
+    "AWS"
+  ]
+}

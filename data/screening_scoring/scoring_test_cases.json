@@ -1,0 +1,46 @@
+{
+  "dataset_name": "Zecpath Screening Scoring Test Cases",
+  "version": "1.0.0",
+  "test_cases": [
+    {
+      "test_id": "SCORE_001",
+      "description": "Clear and relevant skills answer",
+      "answer": "I have experience with Python, SQL and Flask.",
+      "intent": "skills",
+      "is_vague": false,
+      "is_missing": false,
+      "is_off_topic": false,
+      "expected_minimum_score": 70
+    },
+    {
+      "test_id": "SCORE_002",
+      "description": "Vague answer",
+      "answer": "Yes.",
+      "intent": "vague",
+      "is_vague": true,
+      "is_missing": false,
+      "is_off_topic": false,
+      "expected_maximum_score": 50
+    },
+    {
+      "test_id": "SCORE_003",
+      "description": "Off-topic answer",
+      "answer": "I enjoy watching movies during weekends.",
+      "intent": "off_topic",
+      "is_vague": false,
+      "is_missing": false,
+      "is_off_topic": true,
+      "expected_maximum_score": 40
+    },
+    {
+      "test_id": "SCORE_004",
+      "description": "Missing answer",
+      "answer": "",
+      "intent": "missing",
+      "is_vague": false,
+      "is_missing": true,
+      "is_off_topic": false,
+      "expected_maximum_score": 20
+    }
+  ]
+}

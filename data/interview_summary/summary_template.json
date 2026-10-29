@@ -1,0 +1,24 @@
+{
+  "candidate": {
+    "candidate_id": "",
+    "job_id": "",
+    "session_id": "",
+    "job_title": ""
+  },
+  "overall_performance": {
+    "hr_score": 0,
+    "aptitude_logic_score": 0,
+    "communication_score": 0,
+    "confidence_score": 0,
+    "consistency_score": 0
+  },
+  "insights": {
+    "strengths": [],
+    "weaknesses": [],
+    "cultural_fit_indicators": [],
+    "risk_flags": [],
+    "inconsistencies": []
+  },
+  "natural_language_summary": "",
+  "disclaimer": "Summary reflects the supplied AI analysis and should be reviewed with the underlying evidence."
+}

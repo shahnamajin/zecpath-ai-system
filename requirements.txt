@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+spacy
+pdfplumber
+python-docx
+loguru
+pytest
+python-dotenv

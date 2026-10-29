@@ -1,0 +1,48 @@
+{
+  "dataset_name": "Zecpath Answer Understanding Test Dataset",
+  "version": "1.0.0",
+  "test_cases": [
+    {
+      "test_id": "ANS_001",
+      "category": "skills",
+      "text": "I have experience with Python and SQL.",
+      "expected_intent": "skills"
+    },
+    {
+      "test_id": "ANS_002",
+      "category": "experience",
+      "text": "I completed a six month internship.",
+      "expected_intent": "experience"
+    },
+    {
+      "test_id": "ANS_003",
+      "category": "availability",
+      "text": "I can join immediately.",
+      "expected_intent": "availability"
+    },
+    {
+      "test_id": "ANS_004",
+      "category": "salary_expectation",
+      "text": "I expect 5 LPA.",
+      "expected_intent": "salary_expectation"
+    },
+    {
+      "test_id": "ANS_005",
+      "category": "skills",
+      "text": "Yes.",
+      "expected_intent": "vague"
+    },
+    {
+      "test_id": "ANS_006",
+      "category": "experience",
+      "text": "",
+      "expected_intent": "missing"
+    },
+    {
+      "test_id": "ANS_007",
+      "category": "skills",
+      "text": "I enjoy watching movies on weekends.",
+      "expected_intent": "off_topic"
+    }
+  ]
+}

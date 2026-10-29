@@ -1,0 +1,172 @@
+{
+  "version": "1.0",
+  "questions": [
+    {
+      "question_id": "HR_INTRO_001",
+      "category": "self_introduction",
+      "question": "Tell me about yourself.",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "easy",
+      "follow_up_eligible": true
+    },
+    {
+      "question_id": "HR_INTRO_002",
+      "category": "self_introduction",
+      "question": "Can you briefly introduce yourself and your professional background?",
+      "candidate_type": ["experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "easy",
+      "follow_up_eligible": true
+    },
+    {
+      "question_id": "HR_INTRO_003",
+      "category": "self_introduction",
+      "question": "Can you tell me about yourself and your academic background?",
+      "candidate_type": ["fresher"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "easy",
+      "follow_up_eligible": true
+    },
+
+    {
+      "question_id": "HR_CAREER_001",
+      "category": "career_journey",
+      "question": "Can you walk me through your career journey?",
+      "candidate_type": ["experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "medium",
+      "follow_up_eligible": true
+    },
+    {
+      "question_id": "HR_CAREER_002",
+      "category": "career_journey",
+      "question": "How has your education prepared you for this role?",
+      "candidate_type": ["fresher"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "medium",
+      "follow_up_eligible": true
+    },
+    {
+      "question_id": "HR_CAREER_003",
+      "category": "career_journey",
+      "question": "Which project or experience are you most proud of?",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "medium",
+      "follow_up_eligible": true
+    },
+
+    {
+      "question_id": "HR_SW_001",
+      "category": "strengths_weaknesses",
+      "question": "What are your greatest strengths?",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "medium",
+      "follow_up_eligible": true
+    },
+    {
+      "question_id": "HR_SW_002",
+      "category": "strengths_weaknesses",
+      "question": "What is one area you are currently trying to improve?",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "medium",
+      "follow_up_eligible": true
+    },
+    {
+      "question_id": "HR_SW_003",
+      "category": "strengths_weaknesses",
+      "question": "Can you describe a weakness and how you are working to improve it?",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "medium",
+      "follow_up_eligible": true
+    },
+
+    {
+      "question_id": "HR_TEAM_001",
+      "category": "teamwork_culture",
+      "question": "Tell me about a time when you worked as part of a team.",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "medium",
+      "follow_up_eligible": true
+    },
+    {
+      "question_id": "HR_TEAM_002",
+      "category": "teamwork_culture",
+      "question": "How do you handle disagreements with team members?",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "medium",
+      "follow_up_eligible": true
+    },
+    {
+      "question_id": "HR_TEAM_003",
+      "category": "teamwork_culture",
+      "question": "How do you adapt when working with people who have different working styles?",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "medium",
+      "follow_up_eligible": true
+    },
+
+    {
+      "question_id": "HR_GOAL_001",
+      "category": "career_goals",
+      "question": "Where do you see yourself in the next five years?",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "medium",
+      "follow_up_eligible": true
+    },
+    {
+      "question_id": "HR_GOAL_002",
+      "category": "career_goals",
+      "question": "What are your short-term career goals?",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "easy",
+      "follow_up_eligible": true
+    },
+    {
+      "question_id": "HR_GOAL_003",
+      "category": "career_goals",
+      "question": "Why are you interested in this role?",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "medium",
+      "follow_up_eligible": true
+    },
+
+    {
+      "question_id": "HR_AVAIL_001",
+      "category": "availability_commitment",
+      "question": "When would you be available to join?",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "easy",
+      "follow_up_eligible": false
+    },
+    {
+      "question_id": "HR_AVAIL_002",
+      "category": "availability_commitment",
+      "question": "Are you comfortable relocating for this position?",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "easy",
+      "follow_up_eligible": true
+    },
+    {
+      "question_id": "HR_AVAIL_003",
+      "category": "availability_commitment",
+      "question": "Are you comfortable working according to the requirements of this role?",
+      "candidate_type": ["fresher", "experienced"],
+      "role_type": ["technical", "non_technical"],
+      "difficulty": "easy",
+      "follow_up_eligible": true
+    }
+  ]
+}

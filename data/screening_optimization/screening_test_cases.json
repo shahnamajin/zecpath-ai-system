@@ -1,0 +1,69 @@
+{
+  "version": "1.0",
+  "test_cases": [
+    {
+      "case_id": "CASE_001",
+      "description": "Strong relevant candidate",
+      "response": "I have two years of Python experience and worked with Flask, SQL and machine learning.",
+      "intent": "experience",
+      "expected_quality": "relevant",
+      "expected_decision": "continue"
+    },
+    {
+      "case_id": "CASE_002",
+      "description": "Short but relevant answer",
+      "response": "I have two years of Python experience.",
+      "intent": "experience",
+      "expected_quality": "relevant",
+      "expected_decision": "continue"
+    },
+    {
+      "case_id": "CASE_003",
+      "description": "Uncertain candidate response",
+      "response": "I think maybe I have some experience with Python.",
+      "intent": "experience",
+      "expected_quality": "uncertain",
+      "expected_decision": "clarify"
+    },
+    {
+      "case_id": "CASE_004",
+      "description": "Off-topic response",
+      "response": "I enjoy watching movies and playing games.",
+      "intent": "off_topic",
+      "expected_quality": "irrelevant",
+      "expected_decision": "clarify"
+    },
+    {
+      "case_id": "CASE_005",
+      "description": "Missing response",
+      "response": "",
+      "intent": "missing",
+      "expected_quality": "missing",
+      "expected_decision": "retry"
+    },
+    {
+      "case_id": "CASE_006",
+      "description": "Strong technical response",
+      "response": "I use Python, Pandas, NumPy, SQL and scikit-learn for data analysis and machine learning projects.",
+      "intent": "skills",
+      "expected_quality": "relevant",
+      "expected_decision": "continue"
+    },
+    {
+      "case_id": "CASE_007",
+      "description": "Vague response",
+      "response": "Yes, I know Python.",
+      "intent": "vague",
+      "expected_quality": "uncertain",
+      "expected_decision": "clarify"
+    },
+    {
+      "case_id": "CASE_008",
+      "description": "Salary response",
+      "response": "I am expecting around 5 LPA.",
+      "intent": "salary_expectation",
+      "expected_quality": "relevant",
+      "expected_decision": "continue"
+    }
+  ]
+}

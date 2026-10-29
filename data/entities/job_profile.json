@@ -1,0 +1,12 @@
+{
+  "job_id": "JOB001",
+  "job_title": "Backend Developer",
+  "company": "Zecpath",
+  "experience_required": "3 Years",
+  "education": "B.Tech/MCA",
+  "required_skills": [
+    "Python",
+    "Django",
+    "AWS"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "levels": {
+    "clarification": {
+      "action": "clarify",
+      "difficulty": "simple"
+    },
+    "deepening": {
+      "action": "probe",
+      "difficulty": "medium"
+    },
+    "example_based": {
+      "action": "request_example",
+      "difficulty": "medium"
+    },
+    "scenario_based": {
+      "action": "scenario",
+      "difficulty": "advanced"
+    }
+  }
+}

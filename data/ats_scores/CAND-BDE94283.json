@@ -1,0 +1,26 @@
+{
+    "candidate_id": "CAND-BDE94283",
+    "job_id": "JOB-1001",
+    "scores": {
+        "skills": 40,
+        "education": 20,
+        "projects": 20,
+        "experience": 0,
+        "certifications": 10
+    },
+    "overall_score": 90,
+    "matched_skills": [
+        "python",
+        "sql",
+        "git",
+        "rest apis",
+        "django"
+    ],
+    "missing_skills": [],
+    "recommendation": "Shortlist",
+    "ai_metadata": {
+        "model": "ATS Scorer V2",
+        "version": "2.0",
+        "processed_at": "2026-08-05T18:23:44.031417"
+    }
+}

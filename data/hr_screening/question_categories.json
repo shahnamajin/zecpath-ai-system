@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "id": "introduction",
+      "name": "Introduction",
+      "description": "Questions about the candidate's background and self-introduction.",
+      "default_priority": 0.8
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "description": "Questions about academic qualifications and educational background.",
+      "default_priority": 0.8
+    },
+    {
+      "id": "experience",
+      "name": "Experience",
+      "description": "Questions about employment, internships, projects and practical experience.",
+      "default_priority": 0.9
+    },
+    {
+      "id": "skills",
+      "name": "Skills",
+      "description": "Questions about technical and soft skills relevant to the job.",
+      "default_priority": 1.0
+    },
+    {
+      "id": "location",
+      "name": "Location",
+      "description": "Questions about work location, remote work and relocation.",
+      "default_priority": 0.7
+    },
+    {
+      "id": "salary",
+      "name": "Salary",
+      "description": "Questions about salary expectations and compensation.",
+      "default_priority": 0.7
+    },
+    {
+      "id": "notice_period",
+      "name": "Notice Period",
+      "description": "Questions about availability and joining timeline.",
+      "default_priority": 0.9
+    }
+  ]
+}

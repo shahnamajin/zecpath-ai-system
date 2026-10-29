@@ -1,0 +1,30 @@
+{
+  "dataset_name": "Zecpath Confidence and Sentiment Signal Definitions",
+  "version": "1.0.0",
+  "signals": {
+    "hesitation": {
+      "description": "Detects observable hesitation markers in transcript text."
+    },
+    "response_length": {
+      "description": "Measures the number of words in the candidate response."
+    },
+    "response_pace": {
+      "description": "Measures speaking pace when duration information is available."
+    },
+    "positive_sentiment": {
+      "description": "Detects positive language in the response."
+    },
+    "negative_sentiment": {
+      "description": "Detects negative language in the response."
+    },
+    "uncertainty": {
+      "description": "Detects language indicating uncertainty or lack of confidence."
+    },
+    "contradiction": {
+      "description": "Identifies differences between current and previously provided information."
+    },
+    "communication_strength": {
+      "description": "Combines observable communication signals into a normalized indicator."
+    }
+  }
+}

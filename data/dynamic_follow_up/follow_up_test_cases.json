@@ -1,0 +1,52 @@
+[
+  {
+    "id": "CASE_001",
+    "response": "",
+    "expected_trigger": "clarification"
+  },
+  {
+    "id": "CASE_002",
+    "response": "Yes",
+    "expected_trigger": "clarification"
+  },
+  {
+    "id": "CASE_003",
+    "response": "I worked on a project.",
+    "expected_trigger": "deepening"
+  },
+  {
+    "id": "CASE_004",
+    "response": "I developed a Flask application.",
+    "expected_trigger": "deepening"
+  },
+  {
+    "id": "CASE_005",
+    "response": "I am good at teamwork.",
+    "expected_trigger": "example_based"
+  },
+  {
+    "id": "CASE_006",
+    "response": "I developed a Flask application and integrated MySQL, REST APIs, authentication and deployment.",
+    "expected_trigger": "scenario_based"
+  },
+  {
+    "id": "CASE_007",
+    "response": "I designed the backend architecture, implemented REST APIs, integrated MySQL and deployed the application.",
+    "expected_trigger": "scenario_based"
+  },
+  {
+    "id": "CASE_008",
+    "response": "I handled the backend.",
+    "expected_trigger": "deepening"
+  },
+  {
+    "id": "CASE_009",
+    "response": "I don't know.",
+    "expected_trigger": "clarification"
+  },
+  {
+    "id": "CASE_010",
+    "response": "I worked with Python for two years and built multiple data analysis and web applications.",
+    "expected_trigger": "scenario_based"
+  }
+]

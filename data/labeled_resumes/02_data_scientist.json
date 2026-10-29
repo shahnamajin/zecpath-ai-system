@@ -1,0 +1,5 @@
+{
+    "HEADER": "Priya Nair, MSc Data Science\npriya.nair88@example.com | 9876543211 | Hyderabad\nSUMMARY\n4+ years of experience building ML models for demand forecasting and recommendation systems.\nWORK HISTORY\nData Scientist, Myntra (2021 - Present)\n* Built demand-forecasting models improving inventory accuracy by 18%.\n* Deployed models via MLflow and FastAPI; monitored drift in production.\nData Analyst, Swiggy (2019 - 2021)\n* Analyzed delivery-time data using SQL and Python; built dashboards in Tableau.\n",
+    "EDUCATION": "M.Sc. Data Science, IIIT Hyderabad, 2019\nB.Sc. Statistics, University of Hyderabad, 2017\n",
+    "CERTIFICATIONS": "TensorFlow Developer Certificate\nCertified in Applied Data Science with Python (University of Michigan / Coursera)\nTECHNICAL SKILLS\nPython, R, SQL, Pandas, Scikit-learn, TensorFlow, PyTorch, MLflow, Tableau, A/B Testing\n"
+}

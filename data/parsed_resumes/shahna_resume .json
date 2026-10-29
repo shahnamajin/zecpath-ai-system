@@ -1,0 +1,148 @@
+{
+    "candidate_id": "CAND-A6F0906B",
+    "created_at": "2026-08-05T18:03:14.281332",
+    "personal_information": {
+        "full_name": "SHAHNA MAJI N",
+        "email": "shahnamaji5@gmail.com",
+        "phone": "+91 6282443595",
+        "location": "Malappuram, Kerala",
+        "linkedin": "www.linkedin.com/in/shahna-maji-n-220a10383",
+        "github": "github.com/shahnamajin"
+    },
+    "professional_summary": "Motivated MCA student with skills in Python, SQL, JavaScript, MySQL, and Flutter. Experienced in web and mobile application development, data analysis, and problem-solving through academic projects. Passionate about learning new technologies and applying technical skills to develop innovative and data-driven solutions.",
+    "education": [
+        {
+            "degree": "Master of Computer Applications (MCA) \u2013 Pursuing",
+            "institution": "LEAD College of Management (Autonomous), Palakkad",
+            "duration": "2025 \u2013 Present"
+        },
+        {
+            "degree": "Bachelor of Computer Applications (BCA)",
+            "institution": "Malabar College of Advanced Studies, Vengara, Malappuram",
+            "duration": "2022 \u2013 2025"
+        }
+    ],
+    "experience": [],
+    "skills": {
+        "programming": [
+            "Python",
+            "SQL",
+            "C",
+            "JavaScript",
+            "Dart"
+        ],
+        "mobile": [
+            "Flutter"
+        ],
+        "frontend": [
+            "HTML",
+            "CSS",
+            "React (Basic)"
+        ],
+        "backend": [
+            "Django",
+            "Django REST Framework",
+            "REST APIs"
+        ],
+        "database": [
+            "MySQL"
+        ],
+        "data_analytics": [
+            "NumPy",
+            "Pandas",
+            "Scikit-learn",
+            "Data Preprocessing",
+            "Machine Learning Fundamentals"
+        ],
+        "tools": [
+            "Git",
+            "GitHub",
+            "VS Code",
+            "Jupyter Notebook",
+            "Google Colab",
+            "Postman",
+            "Power BI",
+            "Tableau"
+        ],
+        "core_concepts": [
+            "Object-Oriented Programming (OOP)",
+            "Problem Solving",
+            "Database Management",
+            "Software"
+        ],
+        "soft_skills": [
+            "Communication",
+            "Team Collaboration",
+            "Analytical Thinking",
+            "Continuous Learning"
+        ]
+    },
+    "projects": [
+        {
+            "title": "MedLens",
+            "category": "Medical Analysis Application",
+            "technologies": [
+                "Flutter",
+                "Python",
+                "MySQL",
+                "Machine Learning"
+            ],
+            "description": [
+                "MedLens is an AI-powered healthcare application developed to analyze medical data, predict diseases, and provide personalized health recommendations.",
+                "Developed Flutter-based user interfaces and integrated application features for healthcare management.",
+                "Integrated backend services and APIs to support disease prediction and health monitoring functionalities.",
+                "Worked with data processing, user management, and application testing to ensure reliable performance."
+            ]
+        },
+        {
+            "title": "SmartCrop",
+            "category": "Crop Recommendation System",
+            "technologies": [
+                "Python",
+                "Streamlit",
+                "Scikit-learn",
+                "Pandas"
+            ],
+            "description": [
+                "SmartCrop AI is a crop recommendation system built using Streamlit and a Random Forest model to predict the best crop based on soil nutrients and climate conditions.",
+                "Uses inputs like N, P, K, temperature, humidity, pH, and rainfall to generate predictions with confidence scores and top suggestions.",
+                "Includes model training, a Streamlit interface, and a dataset for building an efficient and accurate prediction system."
+            ]
+        }
+    ],
+    "certifications": [
+        {
+            "name": "GenAI Powered Data Analytics Job Simulation",
+            "provider": "Tata (Forage)",
+            "date": "Jan 2026"
+        },
+        {
+            "name": "Android App Development using Flutter",
+            "provider": "NASSCOM Certified (36 hrs)",
+            "date": "12 Jan \u2013 16 Jan 2026"
+        },
+        {
+            "name": "Web Development using React JS",
+            "provider": "NASSCOM Certified (36 hrs)",
+            "date": "31 Jan \u2013 04 Feb 2026"
+        }
+    ],
+    "languages": [
+        {
+            "language": "Malayalam",
+            "level": "Native"
+        },
+        {
+            "language": "English",
+            "level": "Proficient"
+        },
+        {
+            "language": "Hindi",
+            "level": "Basic"
+        },
+        {
+            "language": "Arabic",
+            "level": "Basic"
+        }
+    ]
+}

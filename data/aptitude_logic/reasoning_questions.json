@@ -1,0 +1,63 @@
+{
+  "version": "1.0",
+  "questions": [
+    {
+      "question_id": "APT_LOGIC_001",
+      "type": "sequence",
+      "difficulty": "medium",
+      "question": "A project has 3 tasks. Task B must be completed after Task A, and Task C must be completed after Task B. What is the valid order?",
+      "options": [
+        "A-B-C",
+        "B-A-C",
+        "C-B-A",
+        "A-C-B"
+      ],
+      "ideal_answer": "A-B-C",
+      "reasoning_points": [
+        "Identify dependency A before B",
+        "Identify dependency B before C",
+        "Construct valid sequence"
+      ],
+      "weight": 1.0
+    },
+    {
+      "question_id": "APT_LOGIC_002",
+      "type": "prioritization",
+      "difficulty": "medium",
+      "question": "You have a production bug, a routine documentation task, and a low-priority UI improvement. Which should be handled first and why?",
+      "ideal_answer_structure": [
+        "Identify urgency",
+        "Assess impact",
+        "Prioritize production bug",
+        "Explain trade-off"
+      ],
+      "reasoning_points": [
+        "Recognizes business impact",
+        "Prioritizes urgency",
+        "Provides justification"
+      ],
+      "weight": 1.0
+    },
+    {
+      "question_id": "APT_LOGIC_003",
+      "type": "problem_solving",
+      "difficulty": "hard",
+      "question": "An application suddenly becomes slow after a new release. Explain how you would investigate the problem.",
+      "ideal_answer_structure": [
+        "Define problem",
+        "Check recent changes",
+        "Collect evidence",
+        "Isolate bottleneck",
+        "Test hypothesis",
+        "Apply and validate fix"
+      ],
+      "reasoning_points": [
+        "Uses systematic diagnosis",
+        "Uses evidence",
+        "Tests hypotheses",
+        "Validates solution"
+      ],
+      "weight": 1.2
+    }
+  ]
+}

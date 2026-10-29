@@ -1,0 +1,26 @@
+{
+  "dataset_name": "Zecpath Screening Scoring Parameters",
+  "version": "1.0.0",
+  "parameters": {
+    "clarity": {
+      "weight": 0.25,
+      "description": "Measures how clearly the candidate communicates the answer."
+    },
+    "relevance": {
+      "weight": 0.30,
+      "description": "Measures how closely the answer addresses the screening question."
+    },
+    "completeness": {
+      "weight": 0.25,
+      "description": "Measures whether the candidate provides sufficient information."
+    },
+    "consistency": {
+      "weight": 0.20,
+      "description": "Measures consistency with previously provided candidate information."
+    }
+  },
+  "score_range": {
+    "minimum": 0,
+    "maximum": 100
+  }
+}

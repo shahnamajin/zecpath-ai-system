@@ -1,0 +1,27 @@
+[
+  {
+    "id": "COMM_001",
+    "text": "I worked on a Flask project. I developed the backend and integrated the database. The result was a working web application.",
+    "expected": "good"
+  },
+  {
+    "id": "COMM_002",
+    "text": "Um, I, uh, worked on a project, you know, and basically I did some things.",
+    "expected": "weak"
+  },
+  {
+    "id": "COMM_003",
+    "text": "First, I analyzed the requirement. Then I implemented the backend using Flask. Finally, I tested the APIs and documented the result.",
+    "expected": "strong"
+  },
+  {
+    "id": "COMM_004",
+    "text": "I am good at Python and SQL and I used them in my projects for data analysis and web development.",
+    "expected": "moderate"
+  },
+  {
+    "id": "COMM_005",
+    "text": "I worked with Python.",
+    "expected": "short"
+  }
+]

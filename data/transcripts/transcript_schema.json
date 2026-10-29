@@ -1,0 +1,38 @@
+{
+  "schema_name": "Zecpath Voice Transcript Schema",
+  "schema_version": "1.0.0",
+  "description": "Standard schema for storing AI HR screening voice transcripts.",
+  "required_fields": [
+    "transcript_id",
+    "candidate_id",
+    "job_id",
+    "session_id",
+    "language",
+    "started_at",
+    "ended_at",
+    "interactions"
+  ],
+  "metadata_fields": {
+    "candidate_id": {
+      "type": "string",
+      "description": "Unique identifier of the candidate."
+    },
+    "job_id": {
+      "type": "string",
+      "description": "Unique identifier of the job."
+    },
+    "question_id": {
+      "type": "string",
+      "description": "Identifier of the HR screening question."
+    },
+    "timestamp": {
+      "type": "datetime",
+      "description": "Timestamp associated with the interaction."
+    },
+    "confidence_level": {
+      "type": "float",
+      "range": "0.0-1.0",
+      "description": "Speech-to-text confidence score."
+    }
+  }
+}

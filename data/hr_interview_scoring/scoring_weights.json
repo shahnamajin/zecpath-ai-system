@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "weights": {
+    "answer_relevance": 0.35,
+    "communication": 0.25,
+    "confidence": 0.2,
+    "consistency": 0.2
+  },
+  "score_range": [
+    0,
+    100
+  ],
+  "normalization": {
+    "method": "response_average",
+    "minimum_responses_for_full_coverage": 5
+  },
+  "bands": {
+    "80_100": "strong",
+    "60_79": "moderate",
+    "40_59": "developing",
+    "0_39": "needs_improvement"
+  }
+}

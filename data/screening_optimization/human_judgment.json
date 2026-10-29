@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "judgments": [
+    {
+      "case_id": "CASE_001",
+      "human_decision": "continue"
+    },
+    {
+      "case_id": "CASE_002",
+      "human_decision": "continue"
+    },
+    {
+      "case_id": "CASE_003",
+      "human_decision": "clarify"
+    },
+    {
+      "case_id": "CASE_004",
+      "human_decision": "clarify"
+    },
+    {
+      "case_id": "CASE_005",
+      "human_decision": "retry"
+    },
+    {
+      "case_id": "CASE_006",
+      "human_decision": "continue"
+    },
+    {
+      "case_id": "CASE_007",
+      "human_decision": "clarify"
+    },
+    {
+      "case_id": "CASE_008",
+      "human_decision": "continue"
+    }
+  ]
+}

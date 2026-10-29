@@ -1,0 +1,51 @@
+[
+  {
+    "case_id": "EDGE_001",
+    "type": "poor_audio",
+    "audio_quality": 25,
+    "transcript": "",
+    "expected_action": "retry"
+  },
+  {
+    "case_id": "EDGE_002",
+    "type": "background_noise",
+    "audio_quality": 45,
+    "transcript": "I have experience with Python.",
+    "expected_action": "clarify"
+  },
+  {
+    "case_id": "EDGE_003",
+    "type": "language_mixing",
+    "audio_quality": 90,
+    "transcript": "I have two years experience in Python and കുറച്ച് Java.",
+    "expected_action": "clarify"
+  },
+  {
+    "case_id": "EDGE_004",
+    "type": "missing_answer",
+    "audio_quality": 95,
+    "transcript": "",
+    "expected_action": "retry"
+  },
+  {
+    "case_id": "EDGE_005",
+    "type": "unclear_answer",
+    "audio_quality": 90,
+    "transcript": "Maybe something like that.",
+    "expected_action": "clarify"
+  },
+  {
+    "case_id": "EDGE_006",
+    "type": "normal",
+    "audio_quality": 95,
+    "transcript": "I have two years of experience with Python and Flask.",
+    "expected_action": "continue"
+  },
+  {
+    "case_id": "EDGE_007",
+    "type": "repeated_failure",
+    "audio_quality": 15,
+    "transcript": "",
+    "expected_action": "safe_fallback"
+  }
+]

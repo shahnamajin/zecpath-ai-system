@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "fallback_questions": {
+    "experience": [
+      "Could you briefly describe your previous work or project experience?",
+      "Can you mention one project where you used these skills?"
+    ],
+    "skills": [
+      "Could you name the main technical skills you are comfortable with?",
+      "Which technologies have you worked with recently?"
+    ],
+    "education": [
+      "Could you briefly tell me about your highest qualification?",
+      "What did you specialize in during your studies?"
+    ],
+    "availability": [
+      "When would you be available to join?",
+      "How soon could you start if selected?"
+    ],
+    "salary_expectation": [
+      "Could you share your expected salary range?",
+      "What compensation range are you looking for?"
+    ],
+    "general": [
+      "Could you please provide a little more detail?",
+      "Could you briefly explain your answer?"
+    ]
+  }
+}

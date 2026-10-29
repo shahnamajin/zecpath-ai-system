@@ -1,0 +1,44 @@
+{
+  "candidate": {
+    "candidate_id": "CAND_1001",
+    "job_id": "JOB_2001",
+    "session_id": "HR_SESSION_037",
+    "job_title": "Python Developer"
+  },
+  "interview_summary": {
+    "responses_evaluated": 5,
+    "normalization_method": "response_average"
+  },
+  "score": {
+    "final": 89.02,
+    "band": "strong"
+  },
+  "component_scores": {
+    "answer_relevance": 90.0,
+    "communication": 88.0,
+    "confidence": 84.0,
+    "consistency": 93.6
+  },
+  "explainable_breakdown": {
+    "answer_relevance": {
+      "score": 90.0,
+      "weight": 0.35,
+      "weighted_score": 31.5
+    },
+    "communication": {
+      "score": 88.0,
+      "weight": 0.25,
+      "weighted_score": 22.0
+    },
+    "confidence": {
+      "score": 84.0,
+      "weight": 0.2,
+      "weighted_score": 16.8
+    },
+    "consistency": {
+      "score": 93.6,
+      "weight": 0.2,
+      "weighted_score": 18.72
+    }
+  }
+}

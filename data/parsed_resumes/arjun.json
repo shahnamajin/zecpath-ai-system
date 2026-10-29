@@ -1,0 +1,23 @@
+{
+  "candidate_id": "C001",
+  "name": "Arjun Menon",
+  "email": "arjun@example.com",
+  "skills": [
+    "Python",
+    "Django",
+    "AWS",
+    "Kubernetes"
+  ],
+  "education": [
+    {
+      "degree": "B.Tech",
+      "institution": "Anna University"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Paytm Labs",
+      "designation": "Senior Software Engineer"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "roles": {
+    "default": {
+      "ats": 0.40,
+      "screening": 0.25,
+      "hr_interview": 0.35
+    },
+    "technical": {
+      "ats": 0.45,
+      "screening": 0.30,
+      "hr_interview": 0.25
+    },
+    "non_technical": {
+      "ats": 0.25,
+      "screening": 0.30,
+      "hr_interview": 0.45
+    }
+  }
+}

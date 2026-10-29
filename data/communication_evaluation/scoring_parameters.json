@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "weights": {
+    "fluency": 20,
+    "grammar_quality": 20,
+    "vocabulary_range": 15,
+    "clarity": 20,
+    "answer_structure": 15,
+    "filler_control": 10
+  },
+  "normalization": {
+    "enabled": true,
+    "minimum_words_for_full_evaluation": 8,
+    "filler_rate_basis": 100,
+    "length_effect_clamped": true,
+    "score_range": [
+      0,
+      100
+    ]
+  },
+  "signals": {
+    "fillers": [
+      "um",
+      "uh",
+      "erm",
+      "hmm",
+      "mmm",
+      "like",
+      "you know",
+      "actually",
+      "basically",
+      "sort of",
+      "kind of"
+    ],
+    "structure_markers": [
+      "first",
+      "second",
+      "finally",
+      "because",
+      "therefore",
+      "for example",
+      "however",
+      "in conclusion",
+      "overall",
+      "my role",
+      "the result"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "report_id": "RPT_20261001_001",
+  "report_version": "1.0",
+
+  "candidate": {
+    "candidate_id": "CAND_1001",
+    "name": "Sample Candidate",
+    "job_id": "JOB_2001",
+    "role": "Python Developer"
+  },
+
+  "screening_summary": {
+    "final_score": 72.92,
+    "total_questions": 5,
+    "answered_questions": 5
+  },
+
+  "highlighted_information": {
+    "confirmed_skills": [
+      "Python",
+      "Flask",
+      "SQL",
+      "Machine Learning"
+    ],
+
+    "salary_expectation": {
+      "mentioned": true,
+      "values": [
+        {
+          "value": 5,
+          "unit": "lpa"
+        }
+      ]
+    },
+
+    "availability": "2 weeks"
+  },
+
+  "strengths": [
+    "Relevant technical skills were confirmed",
+    "Positive sentiment indicators were detected"
+  ],
+
+  "risks": [
+    "Off-topic response detected for one question"
+  ],
+
+  "missing_data": [],
+
+  "recruiter_summary": "Confirmed technical skills, salary expectation and availability are available for recruiter review."
+}

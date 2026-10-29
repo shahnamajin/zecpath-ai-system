@@ -1,0 +1,177 @@
+{
+  "version": "1.0",
+  "sessions": [
+    {
+      "session_id": "SIM_001",
+      "candidate_id": "CAND_CONFIDENT",
+      "candidate_type": "confident",
+      "hr_score": 88,
+      "communication": 90,
+      "confidence": 92,
+      "consistency": 89,
+      "aptitude_logic": 82,
+      "manual_score": 88,
+      "manual_decision": "continue",
+      "responses": [
+        {
+          "question": "Tell me about yourself.",
+          "answer": "I am an MCA student with strong Python and web development experience. I have built multiple projects and can explain my responsibilities clearly.",
+          "relevance": 92
+        },
+        {
+          "question": "Tell me about a teamwork experience.",
+          "answer": "I worked with a team on a web application, coordinated backend and frontend tasks, and resolved integration issues through regular communication.",
+          "relevance": 90
+        }
+      ]
+    },
+    {
+      "session_id": "SIM_002",
+      "candidate_id": "CAND_HESITANT",
+      "candidate_type": "hesitant",
+      "hr_score": 67,
+      "communication": 62,
+      "confidence": 55,
+      "consistency": 80,
+      "aptitude_logic": 68,
+      "manual_score": 70,
+      "manual_decision": "clarify",
+      "responses": [
+        {
+          "question": "Tell me about yourself.",
+          "answer": "Um, I think I worked on some Python projects and, uh, I learned Flask during college.",
+          "relevance": 75
+        },
+        {
+          "question": "What are your strengths?",
+          "answer": "Maybe teamwork. I worked with others on a project, but I am not sure how to explain it.",
+          "relevance": 70
+        }
+      ]
+    },
+    {
+      "session_id": "SIM_003",
+      "candidate_id": "CAND_INEXPERIENCED",
+      "candidate_type": "inexperienced",
+      "hr_score": 54,
+      "communication": 72,
+      "confidence": 58,
+      "consistency": 91,
+      "aptitude_logic": 65,
+      "manual_score": 58,
+      "manual_decision": "clarify",
+      "responses": [
+        {
+          "question": "Tell me about your experience.",
+          "answer": "I do not have industry experience yet. I completed academic projects using Python and SQL and want to learn in a professional environment.",
+          "relevance": 85
+        },
+        {
+          "question": "Tell me about a challenge you solved.",
+          "answer": "In a college project, I had a database issue. I checked the queries, tested changes, and fixed the problem.",
+          "relevance": 82
+        }
+      ]
+    },
+    {
+      "session_id": "SIM_004",
+      "candidate_id": "CAND_OVERQUALIFIED",
+      "candidate_type": "overqualified",
+      "hr_score": 91,
+      "communication": 94,
+      "confidence": 93,
+      "consistency": 90,
+      "aptitude_logic": 88,
+      "manual_score": 78,
+      "manual_decision": "clarify",
+      "responses": [
+        {
+          "question": "Why are you interested in this role?",
+          "answer": "I have several years of experience leading complex engineering projects. I am interested because I want to apply that experience while contributing directly to the product.",
+          "relevance": 92
+        },
+        {
+          "question": "Where do you see yourself in five years?",
+          "answer": "I expect to lead larger technical initiatives, mentor engineers, and influence architecture decisions.",
+          "relevance": 90
+        }
+      ]
+    },
+    {
+      "session_id": "SIM_005",
+      "candidate_id": "CAND_CONFIDENT_2",
+      "candidate_type": "confident",
+      "hr_score": 84,
+      "communication": 86,
+      "confidence": 89,
+      "consistency": 85,
+      "aptitude_logic": 78,
+      "manual_score": 83,
+      "manual_decision": "continue",
+      "responses": [
+        {
+          "question": "What is your greatest strength?",
+          "answer": "My strongest quality is structured problem solving. I break a problem into smaller tasks, test assumptions, and verify the final result.",
+          "relevance": 91
+        }
+      ]
+    },
+    {
+      "session_id": "SIM_006",
+      "candidate_id": "CAND_HESITANT_2",
+      "candidate_type": "hesitant",
+      "hr_score": 61,
+      "communication": 58,
+      "confidence": 49,
+      "consistency": 74,
+      "aptitude_logic": 63,
+      "manual_score": 64,
+      "manual_decision": "clarify",
+      "responses": [
+        {
+          "question": "How do you handle conflict?",
+          "answer": "Um, maybe I would talk to them and, you know, try to solve it. I think communication is important.",
+          "relevance": 68
+        }
+      ]
+    },
+    {
+      "session_id": "SIM_007",
+      "candidate_id": "CAND_INEXPERIENCED_2",
+      "candidate_type": "inexperienced",
+      "hr_score": 49,
+      "communication": 69,
+      "confidence": 52,
+      "consistency": 86,
+      "aptitude_logic": 60,
+      "manual_score": 52,
+      "manual_decision": "clarify",
+      "responses": [
+        {
+          "question": "Why should we hire you?",
+          "answer": "I am a fresher, but I have learned Python, SQL, and Flask through projects. I am ready to learn and take responsibility.",
+          "relevance": 80
+        }
+      ]
+    },
+    {
+      "session_id": "SIM_008",
+      "candidate_id": "CAND_OVERQUALIFIED_2",
+      "candidate_type": "overqualified",
+      "hr_score": 87,
+      "communication": 91,
+      "confidence": 90,
+      "consistency": 88,
+      "aptitude_logic": 84,
+      "manual_score": 75,
+      "manual_decision": "clarify",
+      "responses": [
+        {
+          "question": "Why this role?",
+          "answer": "The role is below the scope of some of my previous responsibilities, but I am interested in the product and the opportunity to contribute hands-on.",
+          "relevance": 89
+        }
+      ]
+    }
+  ]
+}

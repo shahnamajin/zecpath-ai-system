@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "categories": [
+    {
+      "id": "self_introduction",
+      "name": "Self Introduction",
+      "description": "Questions used to understand the candidate's background, communication and professional summary.",
+      "order": 1
+    },
+    {
+      "id": "career_journey",
+      "name": "Career Journey",
+      "description": "Questions about education, previous experience, projects and career progression.",
+      "order": 2
+    },
+    {
+      "id": "strengths_weaknesses",
+      "name": "Strengths and Weaknesses",
+      "description": "Questions used to understand self-awareness, strengths and areas for improvement.",
+      "order": 3
+    },
+    {
+      "id": "teamwork_culture",
+      "name": "Teamwork and Culture Fit",
+      "description": "Questions about collaboration, communication, conflict handling and workplace behavior.",
+      "order": 4
+    },
+    {
+      "id": "career_goals",
+      "name": "Career Goals",
+      "description": "Questions about short-term goals, long-term goals and professional growth.",
+      "order": 5
+    },
+    {
+      "id": "availability_commitment",
+      "name": "Availability and Commitment",
+      "description": "Questions about joining availability, relocation, work commitment and expectations.",
+      "order": 6
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "candidate_id": "",
+  "personal_information": {
+    "full_name": "",
+    "email": "",
+    "phone": "",
+    "location": "",
+    "linkedin": "",
+    "github": ""
+  },
+  "professional_summary": "",
+  "education": [
+    {
+      "degree": "",
+      "institution": "",
+      "specialization": "",
+      "graduation_year": "",
+      "cgpa": ""
+    }
+  ],
+  "experience": [
+    {
+      "company": "",
+      "designation": "",
+      "start_date": "",
+      "end_date": "",
+      "responsibilities": []
+    }
+  ],
+  "skills": {
+    "technical": [],
+    "soft": [],
+    "tools": [],
+    "frameworks": []
+  },
+  "projects": [],
+  "certifications": [],
+  "languages": []
+}

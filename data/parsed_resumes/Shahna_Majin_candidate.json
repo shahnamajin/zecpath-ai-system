@@ -1,0 +1,36 @@
+{
+    "candidate_id": "CAND-820C874F",
+    "created_at": "2026-08-05T17:12:58.063647",
+    "personal_information": {
+        "full_name": "SHAHNA MAJI N",
+        "email": "shahnamaji5@gmail.com",
+        "phone": "+91 6282443595",
+        "location": "",
+        "linkedin": "",
+        "github": ""
+    },
+    "professional_summary": "",
+    "education": [],
+    "experience": [
+        {
+            "designation": "\u2022 Core Concepts: Object",
+            "company": "Oriented Programming",
+            "duration": "OOP"
+        }
+    ],
+    "skills": {
+        "technical": [
+            "Python",
+            "Java",
+            "JavaScript",
+            "Django",
+            "SQL",
+            "React",
+            "Git"
+        ],
+        "soft": []
+    },
+    "projects": [],
+    "certifications": [],
+    "languages": []
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Zecpath AI Screening Report",
+  "type": "object",
+  "required": [
+    "report_id",
+    "report_version",
+    "candidate",
+    "screening_summary",
+    "key_answers",
+    "highlighted_information",
+    "strengths",
+    "risks",
+    "missing_data",
+    "recruiter_summary"
+  ],
+  "properties": {
+    "report_id": {
+      "type": "string"
+    },
+    "report_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "candidate": {
+      "type": "object"
+    },
+    "screening_summary": {
+      "type": "object"
+    },
+    "key_answers": {
+      "type": "array"
+    },
+    "highlighted_information": {
+      "type": "object"
+    },
+    "strengths": {
+      "type": "array"
+    },
+    "risks": {
+      "type": "array"
+    },
+    "missing_data": {
+      "type": "array"
+    },
+    "behavioral_signals": {
+      "type": "object"
+    },
+    "recruiter_summary": {
+      "type": "string"
+    }
+  }
+}

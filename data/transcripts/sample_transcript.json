@@ -1,0 +1,73 @@
+{
+  "transcript_id": "TRX_20260915_001",
+  "candidate_id": "CAND_1001",
+  "job_id": "JOB_2001",
+  "session_id": "SESSION_3001",
+  "language": "en",
+  "started_at": "2026-09-15T10:00:00Z",
+  "ended_at": "2026-09-15T10:08:30Z",
+
+  "metadata": {
+    "source": "voice_screening",
+    "platform": "zecpath",
+    "schema_version": "1.0.0",
+    "model_version": "stt-v1"
+  },
+
+  "interactions": [
+    {
+      "interaction_id": "INT_001",
+      "question_id": "HR_INT_001",
+      "speaker": "ai",
+      "timestamp": "2026-09-15T10:00:10Z",
+      "text": "Could you please introduce yourself?",
+      "confidence_level": 1.0,
+      "sequence": 1
+    },
+    {
+      "interaction_id": "INT_002",
+      "question_id": "HR_INT_001",
+      "speaker": "candidate",
+      "timestamp": "2026-09-15T10:00:25Z",
+      "text": "I am currently pursuing my master's degree in computer applications and I have a strong interest in software development and data analytics.",
+      "confidence_level": 0.96,
+      "sequence": 2
+    },
+    {
+      "interaction_id": "INT_003",
+      "question_id": "HR_INT_003",
+      "speaker": "ai",
+      "timestamp": "2026-09-15T10:01:10Z",
+      "text": "Why are you interested in this position?",
+      "confidence_level": 1.0,
+      "sequence": 3
+    },
+    {
+      "interaction_id": "INT_004",
+      "question_id": "HR_INT_003",
+      "speaker": "candidate",
+      "timestamp": "2026-09-15T10:01:30Z",
+      "text": "I am interested in this position because it matches my technical skills and gives me an opportunity to work on real-world software projects.",
+      "confidence_level": 0.94,
+      "sequence": 4
+    },
+    {
+      "interaction_id": "INT_005",
+      "question_id": "HR_SKILL_PY_001",
+      "speaker": "ai",
+      "timestamp": "2026-09-15T10:02:15Z",
+      "text": "How have you used Python in your projects or previous experience?",
+      "confidence_level": 1.0,
+      "sequence": 5
+    },
+    {
+      "interaction_id": "INT_006",
+      "question_id": "HR_SKILL_PY_001",
+      "speaker": "candidate",
+      "timestamp": "2026-09-15T10:02:45Z",
+      "text": "I have used Python for data analysis, machine learning projects and building applications using frameworks such as Flask and Streamlit.",
+      "confidence_level": 0.97,
+      "sequence": 6
+    }
+  ]
+}

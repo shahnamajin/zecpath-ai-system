@@ -1,0 +1,40 @@
+{
+    "candidate_id": "",
+    "personal_information": {
+        "full_name": "Arjun Menon",
+        "email": "arjun.menon@example.com",
+        "phone": "",
+        "location": "",
+        "linkedin": "",
+        "github": ""
+    },
+    "professional_summary": "",
+    "education": [
+        {
+            "degree": "B.Tech in Computer Science, Anna University, 2017",
+            "institution": "",
+            "year": ""
+        }
+    ],
+    "experience": [
+        {
+            "designation": "Senior Software Engineer",
+            "company": "Paytm Labs",
+            "duration": "2022 - Present"
+        }
+    ],
+    "skills": {
+        "technical": [
+            "Python",
+            "Django",
+            "AWS",
+            "Kubernetes"
+        ],
+        "soft": []
+    },
+    "projects": [],
+    "certifications": [
+        "AWS"
+    ],
+    "languages": []
+}

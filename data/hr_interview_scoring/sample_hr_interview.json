@@ -1,0 +1,43 @@
+{
+  "candidate_id": "CAND_1001",
+  "job_id": "JOB_2001",
+  "session_id": "HR_SESSION_037",
+  "job_title": "Python Developer",
+  "responses": [
+    {
+      "question_id": "HR_INTRO_001",
+      "answer_relevance": 92,
+      "communication": 89,
+      "confidence": 84,
+      "consistency": 95
+    },
+    {
+      "question_id": "HR_CAREER_002",
+      "answer_relevance": 90,
+      "communication": 88,
+      "confidence": 82,
+      "consistency": 94
+    },
+    {
+      "question_id": "HR_SW_001",
+      "answer_relevance": 88,
+      "communication": 86,
+      "confidence": 85,
+      "consistency": 93
+    },
+    {
+      "question_id": "HR_TEAM_001",
+      "answer_relevance": 91,
+      "communication": 87,
+      "confidence": 83,
+      "consistency": 92
+    },
+    {
+      "question_id": "HR_GOAL_001",
+      "answer_relevance": 89,
+      "communication": 90,
+      "confidence": 86,
+      "consistency": 94
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "thresholds": {
+    "continue_score": 70,
+    "clarify_score": 45,
+    "retry_score": 20
+  },
+  "false_rejection_protection": {
+    "enabled": true,
+    "minimum_relevant_score": 45,
+    "allow_clarification_before_rejection": true
+  }
+}

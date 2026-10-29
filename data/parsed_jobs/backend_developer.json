@@ -1,0 +1,14 @@
+{
+  "job_id": "JOB101",
+  "title": "Backend Developer",
+  "required_skills": [
+    "Python",
+    "Django",
+    "AWS"
+  ],
+  "preferred_skills": [
+    "Docker",
+    "Kubernetes"
+  ],
+  "experience": "3+ Years"
+}

@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "edge_cases": {
+    "poor_audio": {
+      "description": "Audio quality is too poor for reliable transcription.",
+      "default_action": "retry"
+    },
+    "background_noise": {
+      "description": "Background noise affects speech recognition.",
+      "default_action": "clarify"
+    },
+    "language_mixing": {
+      "description": "Candidate uses multiple languages in the same response.",
+      "default_action": "clarify"
+    },
+    "missing_answer": {
+      "description": "Candidate does not provide a usable answer.",
+      "default_action": "retry"
+    },
+    "unclear_answer": {
+      "description": "Response cannot be confidently understood.",
+      "default_action": "clarify"
+    }
+  }
+}

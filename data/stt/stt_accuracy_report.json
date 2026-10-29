@@ -1,0 +1,17 @@
+{
+  "report_name": "Zecpath STT Accuracy Test Report",
+  "version": "1.0.0",
+  "metric": "Word Error Rate",
+  "status": "test_framework_ready",
+  "test_conditions": [
+    "standard accent",
+    "Indian accent",
+    "background noise",
+    "filler words",
+    "interrupted speech",
+    "partial answers",
+    "silence"
+  ],
+  "results": [],
+  "note": "Actual accuracy values require real recorded audio samples and corresponding reference transcripts."
+}

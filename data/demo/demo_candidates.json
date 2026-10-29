@@ -1,0 +1,32 @@
+[
+  {
+    "candidate_id": "DEMO-001",
+    "role": "Software Engineer",
+    "type": "Tech Fresher",
+    "score": 91
+  },
+  {
+    "candidate_id": "DEMO-002",
+    "role": "Software Engineer",
+    "type": "Tech Fresher",
+    "score": 72
+  },
+  {
+    "candidate_id": "DEMO-003",
+    "role": "Software Engineer",
+    "type": "Tech Senior",
+    "score": 85
+  },
+  {
+    "candidate_id": "DEMO-004",
+    "role": "Business Analyst",
+    "type": "Non-Tech Fresher",
+    "score": 68
+  },
+  {
+    "candidate_id": "DEMO-005",
+    "role": "Project Manager",
+    "type": "Non-Tech Senior",
+    "score": 54
+  }
+]

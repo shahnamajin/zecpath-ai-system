@@ -1,0 +1,17 @@
+{
+  "candidate_id": "CAND001",
+  "name": "Arjun Menon",
+  "email": "arjun@example.com",
+  "phone": "+91 9876543210",
+  "location": "Bengaluru",
+  "skills": [
+    "Python",
+    "Django",
+    "AWS"
+  ],
+  "experience": 6,
+  "education": "B.Tech Computer Science",
+  "certifications": [
+    "AWS Cloud Practitioner"
+  ]
+}

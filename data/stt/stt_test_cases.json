@@ -1,0 +1,49 @@
+{
+  "dataset_name": "Zecpath STT Accuracy Test Dataset",
+  "version": "1.0.0",
+  "language": "en",
+  "test_cases": [
+    {
+      "test_id": "STT_001",
+      "condition": "standard_accent",
+      "expected_text": "I have experience in Python and SQL.",
+      "transcribed_text": "I have experience in Python and SQL."
+    },
+    {
+      "test_id": "STT_002",
+      "condition": "indian_accent",
+      "expected_text": "I developed a machine learning project using Python.",
+      "transcribed_text": "I developed a machine learning project using Python."
+    },
+    {
+      "test_id": "STT_003",
+      "condition": "background_noise",
+      "expected_text": "I am currently pursuing my master's degree.",
+      "transcribed_text": "I am currently pursuing my master's degree."
+    },
+    {
+      "test_id": "STT_004",
+      "condition": "filler_words",
+      "expected_text": "I have worked with Python and Flask.",
+      "transcribed_text": "Um, I have worked with Python and, uh, Flask."
+    },
+    {
+      "test_id": "STT_005",
+      "condition": "interrupted_speech",
+      "expected_text": "I worked on a healthcare project.",
+      "transcribed_text": "I worked on a healthcare project..."
+    },
+    {
+      "test_id": "STT_006",
+      "condition": "partial_answer",
+      "expected_text": "Python and SQL.",
+      "transcribed_text": "Python and SQL."
+    },
+    {
+      "test_id": "STT_007",
+      "condition": "silence",
+      "expected_text": "",
+      "transcribed_text": ""
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "triggers": {
+    "clarification": {
+      "max_words": 3,
+      "reason": "response_incomplete_or_too_short"
+    },
+    "deepening": {
+      "max_words": 12,
+      "reason": "response_needs_more_detail"
+    },
+    "example_based": {
+      "phrases": [
+        "good at",
+        "strong in",
+        "excellent at",
+        "team player"
+      ],
+      "reason": "general_claim_needs_example"
+    },
+    "scenario_based": {
+      "min_words": 25,
+      "confidence_level": "confident",
+      "reason": "detailed_confident_response"
+    }
+  },
+  "limits": {
+    "max_follow_ups_per_question": 2
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "templates": [
+    {
+      "template_id": "TPL_INTRO_001",
+      "category": "introduction",
+      "template": "Could you please introduce yourself?",
+      "variables": [],
+      "expected_answer_type": "open_text",
+      "roles": ["all"],
+      "follow_up_allowed": true
+    },
+    {
+      "template_id": "TPL_SKILL_001",
+      "category": "skills",
+      "template": "Can you explain your experience with {skill}?",
+      "variables": ["skill"],
+      "expected_answer_type": "technical_experience",
+      "roles": ["technical_roles"],
+      "follow_up_allowed": true
+    },
+    {
+      "template_id": "TPL_PROJECT_001",
+      "category": "experience",
+      "template": "Can you explain the {project_name} project and your contribution to it?",
+      "variables": ["project_name"],
+      "expected_answer_type": "project_experience",
+      "roles": ["all"],
+      "follow_up_allowed": true
+    },
+    {
+      "template_id": "TPL_EDU_001",
+      "category": "education",
+      "template": "What did you specialize in during your {degree}?",
+      "variables": ["degree"],
+      "expected_answer_type": "education",
+      "roles": ["all"],
+      "follow_up_allowed": true
+    },
+    {
+      "template_id": "TPL_EXP_001",
+      "category": "experience",
+      "template": "What were your main responsibilities as a {designation}?",
+      "variables": ["designation"],
+      "expected_answer_type": "experience",
+      "roles": ["all"],
+      "follow_up_allowed": true
+    },
+    {
+      "template_id": "TPL_LOC_001",
+      "category": "location",
+      "template": "Are you comfortable working from {location}?",
+      "variables": ["location"],
+      "expected_answer_type": "yes_no",
+      "roles": ["all"],
+      "follow_up_allowed": false
+    },
+    {
+      "template_id": "TPL_SAL_001",
+      "category": "salary",
+      "template": "What are your salary expectations for this {role} position?",
+      "variables": ["role"],
+      "expected_answer_type": "salary_range",
+      "roles": ["all"],
+      "follow_up_allowed": true
+    },
+    {
+      "template_id": "TPL_NOTICE_001",
+      "category": "notice_period",
+      "template": "What is your current notice period and when can you join?",
+      "variables": [],
+      "expected_answer_type": "duration_date",
+      "roles": ["all"],
+      "follow_up_allowed": true
+    }
+  ]
+}

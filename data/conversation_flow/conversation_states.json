@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "states": [
+    "START",
+    "ASKING",
+    "WAITING_FOR_RESPONSE",
+    "PROCESSING_RESPONSE",
+    "CLARIFICATION",
+    "RETRY",
+    "FALLBACK",
+    "NEXT_QUESTION",
+    "COMPLETED",
+    "FAILED"
+  ]
+}

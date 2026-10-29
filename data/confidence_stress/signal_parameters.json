@@ -1,0 +1,64 @@
+{
+  "version": "1.0",
+  "signals": {
+    "hesitation": {
+      "weight": 0.25,
+      "patterns": [
+        "um",
+        "uh",
+        "erm",
+        "hmm",
+        "mmm",
+        "...",
+        "--"
+      ]
+    },
+    "uncertainty": {
+      "weight": 0.2,
+      "phrases": [
+        "i think",
+        "maybe",
+        "probably",
+        "perhaps",
+        "i guess",
+        "i'm not sure",
+        "i am not sure",
+        "possibly",
+        "i don't know",
+        "might be",
+        "could be"
+      ]
+    },
+    "repetition": {
+      "weight": 0.15
+    },
+    "contradiction": {
+      "weight": 0.2
+    },
+    "sentiment": {
+      "weight": 0.1
+    },
+    "response_stability": {
+      "weight": 0.1
+    }
+  },
+  "stress_indicators": [
+    "high_hesitation",
+    "high_uncertainty",
+    "repeated_words",
+    "negative_sentiment",
+    "contradictory_response",
+    "very_short_response"
+  ],
+  "score_range": [
+    0,
+    100
+  ],
+  "interpretation": {
+    "80_100": "high_behavioral_confidence",
+    "60_79": "moderate_behavioral_confidence",
+    "40_59": "low_behavioral_confidence",
+    "0_39": "very_low_behavioral_confidence"
+  },
+  "note": "Signals are behavioral/textual indicators only and are not a diagnosis or definitive measurement of emotional state."
+}

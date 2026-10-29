@@ -1,0 +1,20 @@
+{
+  "comparison_dimensions": [
+    "overall_score",
+    "decision",
+    "communication",
+    "confidence",
+    "consistency"
+  ],
+  "decision_thresholds": {
+    "continue": 80,
+    "clarify": 60,
+    "review": 0
+  },
+  "decision_rule": {
+    "score_gte_80": "continue",
+    "score_60_to_79_99": "clarify",
+    "score_lt_60": "review"
+  },
+  "tolerance_for_score_difference": 5
+}

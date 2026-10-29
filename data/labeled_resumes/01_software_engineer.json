@@ -1,0 +1,7 @@
+{
+    "HEADER": "Arjun Menon\nSenior Software Engineer\nEmail: arjun.menon@example.com | Phone: +91-98765-43210 | Location: Bengaluru, India\nPROFESSIONAL SUMMARY\nBackend engineer with 6 years of experience designing and scaling distributed systems in fintech.\n",
+    "EXPERIENCE": "Senior Software Engineer — Paytm Labs, Bengaluru (Jun 2022 – Present)\n- Led migration of payment-settlement service to Kubernetes, cutting latency by 30%.\n- Mentored 4 junior engineers; owns on-call rotation for the payments platform.\nSoftware Engineer II — Freshworks, Chennai (Jan 2019 – May 2022)\n- Built REST APIs in Python/Django serving 2M+ daily requests.\n- Introduced CI/CD pipeline using Jenkins and Docker.\nSoftware Engineer — Zoho Corporation, Chennai (Jul 2017 – Dec 2018)\n- Developed internal tooling in Java and Spring Boot.\n",
+    "EDUCATION": "B.Tech in Computer Science and Engineering, Anna University, 2017\n",
+    "CERTIFICATIONS": "- AWS Certified Solutions Architect – Associate (2023)\n- Certified Kubernetes Administrator (CKA), 2022\n",
+    "SKILLS": "Python, Java, Django, Spring Boot, PostgreSQL, Redis, Kafka, Docker, Kubernetes, AWS, System Design\n"
+}
