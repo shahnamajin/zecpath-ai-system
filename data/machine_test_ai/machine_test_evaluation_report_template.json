@@ -1,0 +1,66 @@
+{
+  "report_id": "MTR_<generated>",
+  "candidate_id": "CAND_<pseudonymous_id>",
+  "session_id": "SESSION_<id>",
+  "task": {
+    "task_id": "TASK_<id>",
+    "task_type": "coding|debugging|file_based|mini_system_design",
+    "task_version": "1.0",
+    "difficulty": "foundation|intermediate|advanced",
+    "rubric_version": "1.0"
+  },
+  "timing": {
+    "started_at": null,
+    "submitted_at": null,
+    "time_limit_seconds": null,
+    "elapsed_seconds": null,
+    "time_status": "within_limit|submitted_after_limit|paused_for_approved_reason|technical_extension",
+    "approved_adjustment_seconds": 0
+  },
+  "submission": {
+    "final_artifact_refs": [],
+    "snapshot_refs": [],
+    "execution_events": [],
+    "test_summary": {
+      "passed": null,
+      "failed": null,
+      "skipped": null
+    },
+    "infrastructure_status": "healthy|degraded|failed"
+  },
+  "scores": {
+    "correctness": {
+      "rating_0_to_4": null,
+      "weight": null,
+      "evidence": [],
+      "explanation": ""
+    },
+    "efficiency": {
+      "rating_0_to_4": null,
+      "weight": null,
+      "evidence": [],
+      "explanation": ""
+    },
+    "code_quality": {
+      "rating_0_to_4": null,
+      "weight": null,
+      "evidence": [],
+      "explanation": ""
+    },
+    "problem_solving": {
+      "rating_0_to_4": null,
+      "weight": null,
+      "evidence": [],
+      "explanation": ""
+    },
+    "base_score_0_to_100": null,
+    "time_efficiency_rating_0_to_4": null
+  },
+  "review": {
+    "human_review_required": true,
+    "status": "pending|reviewed|needs_clarification",
+    "limitations": [],
+    "evaluator_id": null,
+    "review_notes": ""
+  }
+}

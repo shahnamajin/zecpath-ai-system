@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0",
+  "project": "ZECPath AI",
+  "day": 50,
+  "status": "design_only_unvalidated",
+  "scoring_scale": {
+    "min_rating": 0,
+    "max_rating": 4,
+    "normalized_score_min": 0,
+    "normalized_score_max": 100
+  },
+  "rating_anchors": {
+    "0": "Missing or wholly incorrect evidence",
+    "1": "Major gaps; limited partial progress",
+    "2": "Partially meets requirements; material gaps remain",
+    "3": "Meets core requirements with minor issues",
+    "4": "Fully meets requirements with strong, well-supported evidence"
+  },
+  "task_types": {
+    "coding": {
+      "dimensions": {
+        "correctness": 0.4,
+        "efficiency": 0.2,
+        "code_quality": 0.2,
+        "problem_solving": 0.2
+      },
+      "evidence": [
+        "unit_test_results",
+        "hidden_test_summary",
+        "source_snapshots",
+        "runtime_metrics",
+        "candidate_approach_notes"
+      ]
+    },
+    "debugging": {
+      "dimensions": {
+        "correctness": 0.35,
+        "efficiency": 0.15,
+        "code_quality": 0.2,
+        "problem_solving": 0.3
+      },
+      "evidence": [
+        "baseline_failure",
+        "patch_diff",
+        "regression_test_results",
+        "changed_file_list",
+        "candidate_diagnosis_notes"
+      ]
+    },
+    "file_based": {
+      "dimensions": {
+        "correctness": 0.45,
+        "efficiency": 0.15,
+        "code_quality": 0.2,
+        "problem_solving": 0.2
+      },
+      "evidence": [
+        "input_file_manifest",
+        "output_artifact_hashes",
+        "schema_validation",
+        "transformation_script",
+        "data_integrity_checks"
+      ]
+    },
+    "mini_system_design": {
+      "dimensions": {
+        "correctness": 0.25,
+        "efficiency": 0.15,
+        "code_quality": 0.25,
+        "problem_solving": 0.35
+      },
+      "evidence": [
+        "architecture_diagram",
+        "requirements_checklist",
+        "api_or_data_model",
+        "tradeoff_notes",
+        "risk_analysis"
+      ]
+    }
+  },
+  "score_formula": "base_score = sum((dimension_rating / 4) * dimension_weight * 100)",
+  "time_policy": {
+    "separate_from_base_score": true,
+    "time_status_values": [
+      "within_limit",
+      "submitted_after_limit",
+      "paused_for_approved_reason",
+      "technical_extension"
+    ],
+    "time_efficiency_rating_range": [
+      0,
+      4
+    ],
+    "large_speed_bonus": false,
+    "fast_completion_is_not_proof_of_skill": true,
+    "correctness_gate": "Time efficiency cannot compensate for failed correctness or missing required deliverables.",
+    "time_source": "server_authoritative_timestamp_and_monotonic_elapsed_time",
+    "pause_reasons": [
+      "platform_outage",
+      "approved_accommodation"
+    ]
+  },
+  "capture": {
+    "code_snapshots": {
+      "enabled_in_design": true,
+      "events": [
+        "periodic_snapshot",
+        "explicit_save",
+        "final_submit"
+      ],
+      "capture_scope": "assessment_workspace_only"
+    },
+    "execution_results": [
+      "command",
+      "exit_code",
+      "duration_ms",
+      "resource_usage",
+      "test_summary"
+    ],
+    "file_artifacts": [
+      "relative_path",
+      "mime_type",
+      "size_bytes",
+      "sha256",
+      "schema_validation_status"
+    ],
+    "system_design_artifacts": [
+      "diagram_reference",
+      "design_notes",
+      "api_model",
+      "data_model",
+      "assumptions"
+    ],
+    "privacy_controls": [
+      "no_covert_screen_recording",
+      "no_keystroke_surveillance",
+      "redact_secrets_from_logs"
+    ]
+  },
+  "evaluation_rules": {
+    "automated": [
+      "unit_and_hidden_tests",
+      "schema_validation",
+      "static_checks",
+      "resource_limit_checks"
+    ],
+    "human_review": [
+      "problem_solving_approach",
+      "design_tradeoffs",
+      "contextual_code_quality",
+      "ambiguous_or_infrastructure_affected_results"
+    ],
+    "missing_evidence": "mark_not_assessable_and_route_for_review_when_capture_or_platform_failure_is_possible",
+    "infrastructure_failure": "must_not_be_silently_scored_as_candidate_failure"
+  },
+  "sandbox_requirements": {
+    "ephemeral_isolation": true,
+    "non_root_execution": true,
+    "cpu_memory_wall_clock_limits": true,
+    "filesystem_isolation": true,
+    "network_disabled_by_default": true,
+    "production_credentials_available": false,
+    "cleanup_after_evaluation": true
+  },
+  "report_fields": [
+    "candidate_session_task_metadata",
+    "task_version_and_rubric_version",
+    "submission_artifact_references",
+    "execution_and_test_results",
+    "dimension_scores_weights_and_evidence",
+    "time_status_and_approved_adjustments",
+    "limitations_and_infrastructure_status",
+    "human_review_status"
+  ]
+}

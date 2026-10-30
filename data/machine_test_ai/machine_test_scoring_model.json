@@ -1,0 +1,65 @@
+{
+  "model_version": "1.0",
+  "scale": "0-4 per dimension; weighted normalized score 0-100",
+  "formula": "base_score = sum((dimension_rating / 4) * dimension_weight * 100)",
+  "task_type_weights": {
+    "coding": {
+      "correctness": 0.4,
+      "efficiency": 0.2,
+      "code_quality": 0.2,
+      "problem_solving": 0.2
+    },
+    "debugging": {
+      "correctness": 0.35,
+      "efficiency": 0.15,
+      "code_quality": 0.2,
+      "problem_solving": 0.3
+    },
+    "file_based": {
+      "correctness": 0.45,
+      "efficiency": 0.15,
+      "code_quality": 0.2,
+      "problem_solving": 0.2
+    },
+    "mini_system_design": {
+      "correctness": 0.25,
+      "efficiency": 0.15,
+      "code_quality": 0.25,
+      "problem_solving": 0.35
+    }
+  },
+  "time_scoring": {
+    "separate_from_base_score": true,
+    "time_status_values": [
+      "within_limit",
+      "submitted_after_limit",
+      "paused_for_approved_reason",
+      "technical_extension"
+    ],
+    "time_efficiency_rating_range": [
+      0,
+      4
+    ],
+    "large_speed_bonus": false,
+    "fast_completion_is_not_proof_of_skill": true,
+    "correctness_gate": "Time efficiency cannot compensate for failed correctness or missing required deliverables.",
+    "time_source": "server_authoritative_timestamp_and_monotonic_elapsed_time",
+    "pause_reasons": [
+      "platform_outage",
+      "approved_accommodation"
+    ]
+  },
+  "rating_anchors": {
+    "0": "Missing or wholly incorrect evidence",
+    "1": "Major gaps; limited partial progress",
+    "2": "Partially meets requirements; material gaps remain",
+    "3": "Meets core requirements with minor issues",
+    "4": "Fully meets requirements with strong, well-supported evidence"
+  },
+  "guardrails": [
+    "Time cannot compensate for failed correctness.",
+    "Do not reward raw speed as a proxy for skill.",
+    "Human review is required for reasoning and context-dependent quality.",
+    "Missing evidence and infrastructure failures must be handled separately from candidate performance."
+  ]
+}
