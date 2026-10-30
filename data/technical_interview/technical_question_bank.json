@@ -1,0 +1,421 @@
+{
+  "bank_name": "ZECPath Technical Interview Question Bank",
+  "version": "1.0",
+  "status": "illustrative_seed_questions_require_subject_matter_review",
+  "questions": [
+    {
+      "question_id": "MERN_DEVELOPER-INTRO-001",
+      "version": 1,
+      "role_ids": [
+        "mern_developer"
+      ],
+      "skill_domain": "javascript",
+      "section": "introduction",
+      "experience_bands": [
+        "foundational",
+        "intermediate",
+        "advanced"
+      ],
+      "difficulty": "easy",
+      "question_type": "introduction",
+      "prompt": "Introduce yourself and explain your interest in working as a JavaScript-focused engineer.",
+      "expected_evidence": [
+        "Relevant learning or work background",
+        "Interest in the role",
+        "Clear technical context"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "MERN_DEVELOPER-EXP-001",
+      "version": 1,
+      "role_ids": [
+        "mern_developer"
+      ],
+      "skill_domain": "javascript",
+      "section": "experience_based",
+      "experience_bands": [
+        "foundational",
+        "intermediate",
+        "advanced"
+      ],
+      "difficulty": "medium",
+      "question_type": "experience_based",
+      "prompt": "Describe a project or task where you used JavaScript. Explain your contribution and one technical decision.",
+      "expected_evidence": [
+        "Project context",
+        "Personal contribution",
+        "Technical decision and rationale",
+        "Outcome or learning"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "MERN_DEVELOPER-CON-001",
+      "version": 1,
+      "role_ids": [
+        "mern_developer"
+      ],
+      "skill_domain": "javascript",
+      "section": "conceptual",
+      "experience_bands": [
+        "foundational",
+        "intermediate"
+      ],
+      "difficulty": "easy",
+      "question_type": "conceptual",
+      "prompt": "Explain a core JavaScript concept you use regularly and give a practical example.",
+      "expected_evidence": [
+        "Correct concept explanation",
+        "Relevant example",
+        "Accurate terminology"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "MERN_DEVELOPER-CON-002",
+      "version": 1,
+      "role_ids": [
+        "mern_developer"
+      ],
+      "skill_domain": "javascript",
+      "section": "conceptual",
+      "experience_bands": [
+        "intermediate",
+        "advanced"
+      ],
+      "difficulty": "hard",
+      "question_type": "conceptual",
+      "prompt": "Explain a deeper JavaScript concept and discuss its trade-offs in a production application.",
+      "expected_evidence": [
+        "Technical accuracy",
+        "Trade-off analysis",
+        "Production implications"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "MERN_DEVELOPER-SCN-001",
+      "version": 1,
+      "role_ids": [
+        "mern_developer"
+      ],
+      "skill_domain": "javascript",
+      "section": "scenario_based",
+      "experience_bands": [
+        "foundational",
+        "intermediate",
+        "advanced"
+      ],
+      "difficulty": "medium",
+      "question_type": "scenario_based",
+      "prompt": "A production issue appears in a system using JavaScript. Describe how you would investigate, mitigate, and verify the fix.",
+      "expected_evidence": [
+        "Problem isolation",
+        "Prioritized investigation",
+        "Safe mitigation",
+        "Verification and communication"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "MERN_DEVELOPER-SYS-001",
+      "version": 1,
+      "role_ids": [
+        "mern_developer"
+      ],
+      "skill_domain": "javascript",
+      "section": "scenario_based",
+      "experience_bands": [
+        "advanced"
+      ],
+      "difficulty": "expert",
+      "question_type": "scenario_based",
+      "prompt": "Design a reliable, scalable service architecture for a high-traffic JavaScript workload. Explain key trade-offs.",
+      "expected_evidence": [
+        "Requirements and constraints",
+        "Architecture components",
+        "Scalability and reliability",
+        "Security and observability",
+        "Trade-offs"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "JAVA_DEVELOPER-INTRO-001",
+      "version": 1,
+      "role_ids": [
+        "java_developer"
+      ],
+      "skill_domain": "java_language",
+      "section": "introduction",
+      "experience_bands": [
+        "foundational",
+        "intermediate",
+        "advanced"
+      ],
+      "difficulty": "easy",
+      "question_type": "introduction",
+      "prompt": "Introduce yourself and explain your interest in working as a Java-focused engineer.",
+      "expected_evidence": [
+        "Relevant learning or work background",
+        "Interest in the role",
+        "Clear technical context"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "JAVA_DEVELOPER-EXP-001",
+      "version": 1,
+      "role_ids": [
+        "java_developer"
+      ],
+      "skill_domain": "java_language",
+      "section": "experience_based",
+      "experience_bands": [
+        "foundational",
+        "intermediate",
+        "advanced"
+      ],
+      "difficulty": "medium",
+      "question_type": "experience_based",
+      "prompt": "Describe a project or task where you used Java. Explain your contribution and one technical decision.",
+      "expected_evidence": [
+        "Project context",
+        "Personal contribution",
+        "Technical decision and rationale",
+        "Outcome or learning"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "JAVA_DEVELOPER-CON-001",
+      "version": 1,
+      "role_ids": [
+        "java_developer"
+      ],
+      "skill_domain": "java_language",
+      "section": "conceptual",
+      "experience_bands": [
+        "foundational",
+        "intermediate"
+      ],
+      "difficulty": "easy",
+      "question_type": "conceptual",
+      "prompt": "Explain a core Java concept you use regularly and give a practical example.",
+      "expected_evidence": [
+        "Correct concept explanation",
+        "Relevant example",
+        "Accurate terminology"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "JAVA_DEVELOPER-CON-002",
+      "version": 1,
+      "role_ids": [
+        "java_developer"
+      ],
+      "skill_domain": "java_language",
+      "section": "conceptual",
+      "experience_bands": [
+        "intermediate",
+        "advanced"
+      ],
+      "difficulty": "hard",
+      "question_type": "conceptual",
+      "prompt": "Explain a deeper Java concept and discuss its trade-offs in a production application.",
+      "expected_evidence": [
+        "Technical accuracy",
+        "Trade-off analysis",
+        "Production implications"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "JAVA_DEVELOPER-SCN-001",
+      "version": 1,
+      "role_ids": [
+        "java_developer"
+      ],
+      "skill_domain": "java_language",
+      "section": "scenario_based",
+      "experience_bands": [
+        "foundational",
+        "intermediate",
+        "advanced"
+      ],
+      "difficulty": "medium",
+      "question_type": "scenario_based",
+      "prompt": "A production issue appears in a system using Java. Describe how you would investigate, mitigate, and verify the fix.",
+      "expected_evidence": [
+        "Problem isolation",
+        "Prioritized investigation",
+        "Safe mitigation",
+        "Verification and communication"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "JAVA_DEVELOPER-SYS-001",
+      "version": 1,
+      "role_ids": [
+        "java_developer"
+      ],
+      "skill_domain": "java_language",
+      "section": "scenario_based",
+      "experience_bands": [
+        "advanced"
+      ],
+      "difficulty": "expert",
+      "question_type": "scenario_based",
+      "prompt": "Design a reliable, scalable service architecture for a high-traffic Java workload. Explain key trade-offs.",
+      "expected_evidence": [
+        "Requirements and constraints",
+        "Architecture components",
+        "Scalability and reliability",
+        "Security and observability",
+        "Trade-offs"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "DEVOPS_ENGINEER-INTRO-001",
+      "version": 1,
+      "role_ids": [
+        "devops_engineer"
+      ],
+      "skill_domain": "linux",
+      "section": "introduction",
+      "experience_bands": [
+        "foundational",
+        "intermediate",
+        "advanced"
+      ],
+      "difficulty": "easy",
+      "question_type": "introduction",
+      "prompt": "Introduce yourself and explain your interest in working as a Linux-focused engineer.",
+      "expected_evidence": [
+        "Relevant learning or work background",
+        "Interest in the role",
+        "Clear technical context"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "DEVOPS_ENGINEER-EXP-001",
+      "version": 1,
+      "role_ids": [
+        "devops_engineer"
+      ],
+      "skill_domain": "linux",
+      "section": "experience_based",
+      "experience_bands": [
+        "foundational",
+        "intermediate",
+        "advanced"
+      ],
+      "difficulty": "medium",
+      "question_type": "experience_based",
+      "prompt": "Describe a project or task where you used Linux. Explain your contribution and one technical decision.",
+      "expected_evidence": [
+        "Project context",
+        "Personal contribution",
+        "Technical decision and rationale",
+        "Outcome or learning"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "DEVOPS_ENGINEER-CON-001",
+      "version": 1,
+      "role_ids": [
+        "devops_engineer"
+      ],
+      "skill_domain": "linux",
+      "section": "conceptual",
+      "experience_bands": [
+        "foundational",
+        "intermediate"
+      ],
+      "difficulty": "easy",
+      "question_type": "conceptual",
+      "prompt": "Explain a core Linux concept you use regularly and give a practical example.",
+      "expected_evidence": [
+        "Correct concept explanation",
+        "Relevant example",
+        "Accurate terminology"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "DEVOPS_ENGINEER-CON-002",
+      "version": 1,
+      "role_ids": [
+        "devops_engineer"
+      ],
+      "skill_domain": "linux",
+      "section": "conceptual",
+      "experience_bands": [
+        "intermediate",
+        "advanced"
+      ],
+      "difficulty": "hard",
+      "question_type": "conceptual",
+      "prompt": "Explain a deeper Linux concept and discuss its trade-offs in a production application.",
+      "expected_evidence": [
+        "Technical accuracy",
+        "Trade-off analysis",
+        "Production implications"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "DEVOPS_ENGINEER-SCN-001",
+      "version": 1,
+      "role_ids": [
+        "devops_engineer"
+      ],
+      "skill_domain": "linux",
+      "section": "scenario_based",
+      "experience_bands": [
+        "foundational",
+        "intermediate",
+        "advanced"
+      ],
+      "difficulty": "medium",
+      "question_type": "scenario_based",
+      "prompt": "A production issue appears in a system using Linux. Describe how you would investigate, mitigate, and verify the fix.",
+      "expected_evidence": [
+        "Problem isolation",
+        "Prioritized investigation",
+        "Safe mitigation",
+        "Verification and communication"
+      ],
+      "review_status": "illustrative_not_approved"
+    },
+    {
+      "question_id": "DEVOPS_ENGINEER-SYS-001",
+      "version": 1,
+      "role_ids": [
+        "devops_engineer"
+      ],
+      "skill_domain": "linux",
+      "section": "scenario_based",
+      "experience_bands": [
+        "advanced"
+      ],
+      "difficulty": "expert",
+      "question_type": "scenario_based",
+      "prompt": "Design a reliable, scalable service architecture for a high-traffic Linux workload. Explain key trade-offs.",
+      "expected_evidence": [
+        "Requirements and constraints",
+        "Architecture components",
+        "Scalability and reliability",
+        "Security and observability",
+        "Trade-offs"
+      ],
+      "review_status": "illustrative_not_approved"
+    }
+  ]
+}
