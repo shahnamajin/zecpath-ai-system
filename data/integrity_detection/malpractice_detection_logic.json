@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0",
+  "project": "ZECPath AI",
+  "day": 49,
+  "status": "design_only_unvalidated",
+  "purpose": "Prioritize human review of observable interview-session events; never determine that a candidate cheated.",
+  "prohibited_uses": [
+    "automatic_rejection",
+    "candidate_ranking",
+    "candidate_honesty_or_integrity_score",
+    "probability_of_cheating_claim",
+    "covert_screen_or_device_monitoring"
+  ],
+  "consent": {
+    "advance_notice_required": true,
+    "separate_opt_in_for_audio_analysis": true,
+    "non_audio_or_non_video_alternative": true,
+    "declining_consent_penalty": false,
+    "withdrawal_supported": true
+  },
+  "quality_gates": {
+    "low_confidence_action": "unavailable",
+    "technical_interruption_action": "exclude_or_context_only",
+    "deduplicate_focus_transitions": true,
+    "exclude_breaks_and_setup": true,
+    "exclude_approved_accommodations": true
+  },
+  "signals": [
+    {
+      "event_type": "page_hidden_sustained",
+      "source": "browser_visibility_state",
+      "description": "Interview page becomes hidden for a sustained interval during an active timed question.",
+      "provisional_trigger": {
+        "duration_seconds_gt": 10
+      },
+      "review_weight": 2,
+      "candidate_warning": "Your interview page appears to have become inactive. If this was accidental or caused by a device notification, you may continue.",
+      "limitations": [
+        "Does not identify which app or content was opened.",
+        "May have benign explanations."
+      ]
+    },
+    {
+      "event_type": "page_hidden_repeated",
+      "source": "browser_visibility_state",
+      "description": "Two or more sustained page-hidden intervals within one interview section.",
+      "provisional_trigger": {
+        "interval_count_gte": 2,
+        "duration_seconds_each_gt": 10
+      },
+      "review_weight": 2,
+      "candidate_warning": "We noticed repeated interruptions to the interview page. Please let the interviewer know if you are experiencing a technical issue.",
+      "limitations": [
+        "Must exclude breaks, setup, reconnects, and permitted workflows."
+      ]
+    },
+    {
+      "event_type": "window_blur_cluster",
+      "source": "browser_window_focus",
+      "description": "Three or more blur/focus transitions within 60 seconds.",
+      "provisional_trigger": {
+        "transition_count_gte": 3,
+        "window_seconds": 60
+      },
+      "review_weight": 1,
+      "candidate_warning": "The interview window lost focus. This can happen because of notifications or system dialogs.",
+      "limitations": [
+        "Window blur is weaker evidence than page-hidden state."
+      ]
+    },
+    {
+      "event_type": "possible_additional_voice",
+      "source": "optional_audio_detector_future",
+      "description": "Possible additional voice activity in the consented interview audio stream.",
+      "provisional_trigger": {
+        "confidence_threshold": null,
+        "requires_empirical_validation": true
+      },
+      "review_weight": 2,
+      "enabled_by_default": false,
+      "candidate_warning": "An audio event could not be interpreted reliably. Please confirm that your microphone is working as expected.",
+      "limitations": [
+        "Echo, noise, overlap, TV, and household speech can cause false positives.",
+        "Never identify or transcribe background speakers."
+      ]
+    },
+    {
+      "event_type": "repeated_gaze_change",
+      "source": "day48_opt_in_visual_observation_future",
+      "description": "Repeated gaze-direction changes where visual tracking is valid.",
+      "provisional_trigger": {
+        "requires_valid_tracking": true
+      },
+      "review_weight": 0,
+      "use": "context_only",
+      "limitations": [
+        "Never infer cheating, distraction, reading answers, or deception."
+      ]
+    },
+    {
+      "event_type": "network_or_device_interruption",
+      "source": "interview_client_telemetry",
+      "description": "Network reconnect, device interruption, or media stream failure.",
+      "review_weight": 0,
+      "use": "technical_context",
+      "limitations": [
+        "Must not be treated as malpractice."
+      ]
+    }
+  ],
+  "pattern_rules": [
+    {
+      "rule_id": "PR-01",
+      "description": "Repeated sustained page-hidden events during active questions, after excluding known technical and permitted events.",
+      "required_events": [
+        "page_hidden_repeated"
+      ],
+      "action": "human_review"
+    },
+    {
+      "rule_id": "PR-02",
+      "description": "Multiple independent policy-relevant event types, including a separately validated possible additional voice event, within the same interview section.",
+      "required_events": [
+        "page_hidden_repeated",
+        "possible_additional_voice"
+      ],
+      "action": "human_review",
+      "note": "Still not proof of assistance; audio module must be separately consented and validated."
+    }
+  ],
+  "review_priority_bands": [
+    {
+      "min_score": 0,
+      "max_score": 1,
+      "tag": "no_integrity_flag"
+    },
+    {
+      "min_score": 2,
+      "max_score": 3,
+      "tag": "low_review_priority"
+    },
+    {
+      "min_score": 4,
+      "max_score": 5,
+      "tag": "medium_review_priority"
+    },
+    {
+      "min_score": 6,
+      "max_score": null,
+      "tag": "high_review_priority"
+    }
+  ],
+  "score_policy": {
+    "name": "event_review_priority_not_candidate_score",
+    "deduplicate": true,
+    "cap_repeated_events_per_type_per_window": true,
+    "exclude_context_tags": [
+      "break",
+      "setup",
+      "approved_accommodation",
+      "known_technical_incident"
+    ],
+    "gaze_and_movement_weight": 0,
+    "human_review_required_before_adverse_action": true,
+    "thresholds_and_weights_validated": false
+  },
+  "review_statuses": [
+    "unreviewed",
+    "clarification_requested",
+    "explained",
+    "not_actionable",
+    "escalated"
+  ],
+  "audit_fields": [
+    "session_id",
+    "event_ids",
+    "event_timestamps",
+    "event_durations",
+    "source",
+    "confidence",
+    "quality_status",
+    "policy_version",
+    "candidate_explanation",
+    "reviewer_id",
+    "reviewer_notes",
+    "decision_rationale"
+  ]
+}
