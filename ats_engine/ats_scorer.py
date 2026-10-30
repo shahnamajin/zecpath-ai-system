@@ -1,4 +1,4 @@
-
+from screening_ai.ethics_utils import remove_demographic_fields
 import json
 from datetime import datetime
 

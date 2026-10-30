@@ -1,0 +1,53 @@
+
+{
+  "policy_version": "1.0",
+  "review_day": 43,
+  "principles": {
+    "fairness": true,
+    "transparency": true,
+    "privacy": true,
+    "accountability": true,
+    "human_oversight": true
+  },
+  "consent": {
+    "require_candidate_notice": true,
+    "require_consent_for_optional_ai_processing": true,
+    "explain_ai_purpose": true,
+    "explain_data_usage": true,
+    "provide_contact_for_questions": true
+  },
+  "fairness": {
+    "exclude_from_scoring": [
+      "race",
+      "ethnicity",
+      "religion",
+      "sex",
+      "gender_identity",
+      "disability",
+      "date_of_birth",
+      "marital_status"
+    ],
+    "require_job_relevance": true,
+    "require_consistent_scoring": true,
+    "require_human_review_for_adverse_decisions": true
+  },
+  "explainability": {
+    "record_score_components": true,
+    "record_job_related_evidence": true,
+    "record_missing_requirements": true,
+    "allow_recruiter_review": true
+  },
+  "data_retention": {
+    "require_documented_retention_period": true,
+    "require_deletion_process": true,
+    "require_access_controls": true,
+    "require_audit_logging": true,
+    "retention_days": null
+  },
+  "compliance": {
+    "status": "pending_review",
+    "legal_review_required": true,
+    "privacy_review_required": true,
+    "fairness_validation_required": true
+  }
+}
