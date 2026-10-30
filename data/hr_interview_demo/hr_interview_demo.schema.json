@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ZECPath HR Interview Demo Dataset",
+  "type": "object",
+  "required": [
+    "candidate",
+    "interview",
+    "evaluated_responses",
+    "recommendation_thresholds"
+  ],
+  "properties": {
+    "candidate": {
+      "type": "object",
+      "required": [
+        "candidate_id",
+        "job_id",
+        "session_id",
+        "job_title"
+      ],
+      "properties": {
+        "candidate_id": {
+          "type": "string"
+        },
+        "job_id": {
+          "type": "string"
+        },
+        "session_id": {
+          "type": "string"
+        },
+        "job_title": {
+          "type": "string"
+        }
+      }
+    },
+    "evaluated_responses": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "answer_relevance",
+          "communication",
+          "confidence",
+          "consistency"
+        ],
+        "properties": {
+          "answer_relevance": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "communication": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "consistency": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          }
+        }
+      }
+    },
+    "recommendation_thresholds": {
+      "type": "object",
+      "required": [
+        "strong",
+        "moderate",
+        "review"
+      ],
+      "properties": {
+        "strong": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "moderate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "review": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    }
+  }
+}

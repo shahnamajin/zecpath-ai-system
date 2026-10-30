@@ -1,0 +1,78 @@
+{
+  "dataset_name": "ZECPath HR Interview Demonstration Dataset",
+  "dataset_version": "1.0",
+  "notice": "Synthetic demonstration data only. Component scores are illustrative pre-evaluated inputs, not model predictions or real candidate assessments.",
+  "candidate": {
+    "candidate_id": "DEMO_CAND_001",
+    "job_id": "DEMO_JOB_001",
+    "session_id": "DEMO_SESSION_001",
+    "job_title": "Python Developer",
+    "candidate_type": "fresher"
+  },
+  "interview": {
+    "status": "completed_demo",
+    "language": "English",
+    "questions": [
+      {
+        "question_id": "Q1",
+        "category": "self_introduction",
+        "question": "Please introduce yourself and briefly describe your technical background.",
+        "sample_answer": "I am an MCA student interested in Python development and data analytics. I have worked on academic projects using Python, Flask, and data-processing libraries."
+      },
+      {
+        "question_id": "Q2",
+        "category": "projects_and_experience",
+        "question": "Tell us about a project where you used Python to solve a problem.",
+        "sample_answer": "I developed an academic application using Python and Flask. I separated the application logic into modules, tested the main flows, and corrected issues based on the test results."
+      },
+      {
+        "question_id": "Q3",
+        "category": "teamwork",
+        "question": "How would you handle a disagreement with a teammate?",
+        "sample_answer": "I would first understand the teammate's point, explain my reasoning with evidence, and work toward a solution that supports the project goal."
+      },
+      {
+        "question_id": "Q4",
+        "category": "career_goals",
+        "question": "What would you like to learn during your first six months in this role?",
+        "sample_answer": "I would like to improve my software development practices, understand the team's codebase, contribute to reviewed tasks, and become more confident with deployment and testing."
+      }
+    ]
+  },
+  "evaluated_responses": [
+    {
+      "question_id": "Q1",
+      "answer_relevance": 88,
+      "communication": 86,
+      "confidence": 82,
+      "consistency": 90
+    },
+    {
+      "question_id": "Q2",
+      "answer_relevance": 91,
+      "communication": 84,
+      "confidence": 85,
+      "consistency": 89
+    },
+    {
+      "question_id": "Q3",
+      "answer_relevance": 86,
+      "communication": 88,
+      "confidence": 83,
+      "consistency": 91
+    },
+    {
+      "question_id": "Q4",
+      "answer_relevance": 89,
+      "communication": 87,
+      "confidence": 86,
+      "consistency": 90
+    }
+  ],
+  "recommendation_thresholds": {
+    "strong": 80,
+    "moderate": 60,
+    "review": 40
+  },
+  "recommendation_notice": "Demo recommendation is a configurable decision-support label only. Human review is required."
+}
