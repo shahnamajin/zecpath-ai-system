@@ -1,0 +1,44 @@
+{
+  "report_type": "technical_interview_evaluation",
+  "report_version": "1.0",
+  "candidate_id": "CANDIDATE_ID",
+  "job_id": "JOB_ID",
+  "session_id": "SESSION_ID",
+  "role_id": "mern_developer|java_developer|devops_engineer",
+  "experience_years": 0,
+  "overall_score": 0.0,
+  "question_count": 0,
+  "skill_wise_breakdown": {
+    "skill_domain": {
+      "question_count": 0,
+      "average_score": 0.0,
+      "minimum_score": 0.0,
+      "maximum_score": 0.0
+    }
+  },
+  "answer_depth_summary": {
+    "shallow": 0,
+    "developing": 0,
+    "deep": 0
+  },
+  "question_evaluations": [
+    {
+      "question_id": "QUESTION_ID",
+      "skill_domain": "skill_domain",
+      "question_type": "conceptual|experience_based|scenario_based|introduction",
+      "difficulty": "easy|medium|hard|expert",
+      "dimension_scores": {
+        "accuracy": 0,
+        "depth": 0,
+        "logical_reasoning": 0,
+        "real_world_applicability": 0
+      },
+      "evidence_coverage": 0.0,
+      "answer_depth": "shallow|developing|deep",
+      "normalized_score": 0.0,
+      "evidence_notes": {}
+    }
+  ],
+  "decision_status": "human_review_required",
+  "limitations": []
+}

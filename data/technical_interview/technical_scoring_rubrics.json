@@ -1,0 +1,75 @@
+{
+  "rubric_version": "1.0",
+  "status": "initial_scoring_policy_requires_subject_matter_validation",
+  "score_scale": {
+    "minimum": 0,
+    "maximum": 4,
+    "labels": {
+      "0": "no_evidence",
+      "1": "weak",
+      "2": "partial",
+      "3": "good",
+      "4": "excellent"
+    }
+  },
+  "dimension_definitions": {
+    "accuracy": "Correctness and relevance of the technical content against the question's expected evidence.",
+    "depth": "How thoroughly the candidate explains mechanisms, causes, constraints, and trade-offs.",
+    "logical_reasoning": "Whether the answer follows a coherent, justified sequence of reasoning.",
+    "real_world_applicability": "Whether the candidate connects concepts to practical implementation, debugging, production use, or examples."
+  },
+  "question_type_weights": {
+    "conceptual": {
+      "accuracy": 0.4,
+      "depth": 0.3,
+      "logical_reasoning": 0.2,
+      "real_world_applicability": 0.1
+    },
+    "experience_based": {
+      "accuracy": 0.25,
+      "depth": 0.25,
+      "logical_reasoning": 0.2,
+      "real_world_applicability": 0.3
+    },
+    "scenario_based": {
+      "accuracy": 0.25,
+      "depth": 0.15,
+      "logical_reasoning": 0.35,
+      "real_world_applicability": 0.25
+    },
+    "introduction": {
+      "accuracy": 0.35,
+      "depth": 0.15,
+      "logical_reasoning": 0.2,
+      "real_world_applicability": 0.3
+    }
+  },
+  "difficulty_expectations": {
+    "easy": {
+      "expected_depth": "Explain the core concept accurately and give a simple example where relevant.",
+      "expected_reasoning": "A clear, basic explanation or sequence."
+    },
+    "medium": {
+      "expected_depth": "Explain how or why the concept works and identify relevant constraints.",
+      "expected_reasoning": "A connected explanation with a justified choice or approach."
+    },
+    "hard": {
+      "expected_depth": "Discuss internals, trade-offs, failure modes, and design implications.",
+      "expected_reasoning": "Compare alternatives and justify decisions using constraints."
+    },
+    "expert": {
+      "expected_depth": "Address system-level trade-offs, scalability, reliability, security, and operational consequences.",
+      "expected_reasoning": "Structured reasoning across requirements, options, risks, and validation."
+    }
+  },
+  "shallow_deep_policy": {
+    "shallow": "Depth score below 2.0 OR expected-evidence coverage below 0.40, when expected evidence is supplied.",
+    "developing": "Not shallow and depth score below 3.0, or evidence coverage below 0.70.",
+    "deep": "Depth score at least 3.0 AND reasoning score at least 3.0 AND expected-evidence coverage at least 0.70.",
+    "note": "This is a review aid, not a claim that text-length or keyword matching proves technical competence."
+  },
+  "normalization": {
+    "method": "Criterion scores are rated against the expectation for the question difficulty, then weighted to a 0-100 question score. Skill scores are weighted averages of normalized question scores. Do not apply a blanket bonus or penalty solely because a question is hard.",
+    "difficulty_context_required": true
+  }
+}
