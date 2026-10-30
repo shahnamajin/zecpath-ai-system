@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "project": "ZECPath AI",
+  "day": 48,
+  "purpose": "Neutral, consent-gated description of observable interview-video signals; not candidate merit scoring.",
+  "global_rules": {
+    "candidate_merit_score": false,
+    "feeds_ats_or_ranking": false,
+    "infer_emotion_or_personality": false,
+    "infer_honesty_or_deception": false,
+    "infer_mental_attention": false,
+    "raw_video_retained_by_default": false,
+    "explicit_opt_in_required": true,
+    "equivalent_non_video_path_required": true,
+    "low_confidence_behavior": "mark_unavailable"
+  },
+  "quality_gates": {
+    "minimum_tracking_coverage": 0.6,
+    "minimum_confidence": 0.7,
+    "note": "Initial engineering defaults for suppressing unreliable observations only; not empirically validated thresholds and not candidate score thresholds."
+  },
+  "signals": [
+    {
+      "signal": "eye_gaze",
+      "measurements": [
+        {
+          "name": "screen_region_gaze_ratio",
+          "definition": "Valid gaze samples in a broad calibrated screen region divided by valid gaze samples.",
+          "unit": "ratio",
+          "permitted_insight": "Estimated gaze direction was within the calibrated screen region for X% of valid samples.",
+          "prohibited_inference": [
+            "honesty",
+            "confidence",
+            "interest",
+            "mental attention"
+          ]
+        },
+        {
+          "name": "gaze_direction_event_rate",
+          "definition": "Sustained gaze-direction changes per valid tracked minute.",
+          "unit": "events_per_minute",
+          "permitted_insight": "X sustained gaze-direction changes were detected.",
+          "prohibited_inference": [
+            "distraction",
+            "deception",
+            "nervousness"
+          ]
+        }
+      ],
+      "known_confounds": [
+        "camera position",
+        "glasses",
+        "lighting",
+        "screen layout",
+        "assistive technology",
+        "individual communication style"
+      ]
+    },
+    {
+      "signal": "head_movement",
+      "measurements": [
+        {
+          "name": "head_pose_event_rate",
+          "definition": "Pose changes above a calibrated threshold per valid tracked minute.",
+          "unit": "events_per_minute",
+          "permitted_insight": "X head-pose changes were detected in the measured interval.",
+          "prohibited_inference": [
+            "agreement",
+            "understanding",
+            "leadership",
+            "nervousness"
+          ]
+        }
+      ],
+      "known_confounds": [
+        "camera framing",
+        "mobility differences",
+        "natural movement",
+        "device placement"
+      ]
+    },
+    {
+      "signal": "facial_engagement",
+      "measurements": [
+        {
+          "name": "face_visibility_coverage",
+          "definition": "Frames with usable face detection divided by eligible frames.",
+          "unit": "ratio",
+          "permitted_insight": "Face tracking was available for X% of eligible frames.",
+          "prohibited_inference": [
+            "emotion",
+            "enthusiasm",
+            "sincerity",
+            "personality"
+          ]
+        }
+      ],
+      "known_confounds": [
+        "lighting",
+        "occlusion",
+        "camera quality",
+        "facial differences",
+        "disability-related movement"
+      ]
+    },
+    {
+      "signal": "attention_patterns",
+      "measurements": [
+        {
+          "name": "valid_visual_tracking_coverage",
+          "definition": "Time with valid visual tracking divided by eligible interview time.",
+          "unit": "ratio",
+          "permitted_insight": "Visual tracking was available for X% of the response.",
+          "prohibited_inference": [
+            "listening",
+            "focus",
+            "inattention",
+            "distraction"
+          ]
+        }
+      ],
+      "known_confounds": [
+        "looking away to think",
+        "reading notes",
+        "screen arrangement",
+        "assistive technology"
+      ]
+    },
+    {
+      "signal": "repetitive_movement",
+      "measurements": [
+        {
+          "name": "repeated_motion_event_count",
+          "definition": "Count of repeated movement events from a validated detector.",
+          "unit": "count",
+          "permitted_insight": "X repeated movement events were detected; interpretation is not available.",
+          "prohibited_inference": [
+            "anxiety",
+            "nervousness",
+            "deception",
+            "discomfort"
+          ]
+        }
+      ],
+      "known_confounds": [
+        "self-regulatory movement",
+        "motor differences",
+        "chair/device movement",
+        "camera noise"
+      ],
+      "status": "experimental_not_for_recruiter_scoring"
+    }
+  ],
+  "output_policy": {
+    "display_as": "observations",
+    "include": [
+      "measurement_definition",
+      "value",
+      "unit",
+      "confidence",
+      "tracking_coverage",
+      "quality_status",
+      "limitations_note"
+    ],
+    "if_quality_gate_fails": "unavailable",
+    "never_output_labels": [
+      "nervous",
+      "dishonest",
+      "distracted",
+      "unconfident",
+      "uninterested",
+      "low_focus",
+      "poor_personality"
+    ],
+    "never_use_for": [
+      "candidate_ranking",
+      "automatic_rejection",
+      "ATS_score",
+      "technical_score",
+      "HR_score"
+    ]
+  }
+}
