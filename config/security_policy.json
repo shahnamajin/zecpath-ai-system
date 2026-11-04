@@ -1,0 +1,58 @@
+
+{
+    "roles": {
+        "admin": [
+            "audit.read",
+            "audit.write",
+            "candidate.read",
+            "candidate.write",
+            "consent.read",
+            "consent.write",
+            "report.read",
+            "report.write",
+            "security.manage"
+        ],
+        "recruiter": [
+            "candidate.read",
+            "candidate.write",
+            "consent.read",
+            "report.read",
+            "report.write",
+            "screening.execute"
+        ],
+        "company": [
+            "candidate.read",
+            "report.read",
+            "job.read"
+        ],
+        "candidate": [
+            "profile.read.own",
+            "profile.write.own",
+            "consent.read.own",
+            "consent.write.own",
+            "report.read.own"
+        ]
+    },
+    "retention": {
+        "resume_days": null,
+        "parsed_profile_days": null,
+        "transcript_days": null,
+        "score_days": null,
+        "report_days": null,
+        "audit_log_days": null,
+        "delete_expired_records": false
+    },
+    "encryption": {
+        "algorithm": "Fernet",
+        "key_environment_variable": "ZECPATH_ENCRYPTION_KEY"
+    },
+    "audit": {
+        "database_path": "logs/security_audit.db",
+        "record_metadata": true,
+        "store_sensitive_content": false
+    },
+    "consent": {
+        "require_explicit_consent": true,
+        "allow_withdrawal": true
+    }
+}
