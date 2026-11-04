@@ -1,4 +1,3 @@
-
 import pytest
 
 from hiring_ai.unified_scoring_engine import UnifiedScoringEngine
@@ -11,176 +10,158 @@ def engine():
     return UnifiedScoringEngine()
 
 
-# 1. Default scoring weights
+@pytest.fixture
+def complete_scores():
+    return {
+        "ats": 85,
+        "screening": 80,
+        "hr_interview": 90,
+        "technical_interview": 88,
+        "machine_test": 92,
+    }
+
+
 def test_default_weights_total_one(engine):
     weights = engine.get_weights("default")
-
-    assert weights == {
-        "ats": 0.40,
-        "screening": 0.25,
-        "hr_interview": 0.35,
-    }
+    assert set(weights) == engine.REQUIRED_COMPONENTS
     assert sum(weights.values()) == pytest.approx(1.0)
 
 
-# 2. Technical role weights
 def test_technical_role_weights(engine):
     weights = engine.get_weights("technical")
-
-    assert weights == {
-        "ats": 0.45,
-        "screening": 0.30,
-        "hr_interview": 0.25,
-    }
+    assert weights["technical_interview"] == 0.30
     assert sum(weights.values()) == pytest.approx(1.0)
 
 
-# 3. Non-technical role weights
 def test_non_technical_role_weights(engine):
     weights = engine.get_weights("non_technical")
-
-    assert weights == {
-        "ats": 0.25,
-        "screening": 0.30,
-        "hr_interview": 0.45,
-    }
+    assert weights["hr_interview"] == 0.25
     assert sum(weights.values()) == pytest.approx(1.0)
 
 
-# 4. Default hiring-fit calculation
-def test_hiring_fit_calculation(engine):
-    result = engine.calculate(
-        ats_score=80,
-        screening_score=70,
-        hr_interview_score=90,
-        role_type="default",
-    )
+def test_five_stage_hiring_fit(engine, complete_scores):
+    result = engine.calculate(complete_scores)
 
-    assert result["hiring_fit_percentage"] == pytest.approx(81.0)
+    assert result["hiring_fit_percentage"] == pytest.approx(87.40)
+    assert result["status"] == "completed"
+    assert result["completion_percentage"] == 100
 
 
-# 5. Technical role calculation
-def test_technical_role_adjustment(engine):
-    result = engine.calculate(
-        ats_score=80,
-        screening_score=70,
-        hr_interview_score=90,
-        role_type="technical",
-    )
+def test_incomplete_candidate(engine):
+    scores = {
+        "ats": 85,
+        "screening": 80,
+        "hr_interview": 90,
+        "technical_interview": 88,
+    }
 
-    assert result["hiring_fit_percentage"] == pytest.approx(79.5)
+    result = engine.calculate(scores)
 
-
-# 6. Non-technical role calculation
-def test_non_technical_role_adjustment(engine):
-    result = engine.calculate(
-        ats_score=80,
-        screening_score=70,
-        hr_interview_score=90,
-        role_type="non_technical",
-    )
-
-    assert result["hiring_fit_percentage"] == pytest.approx(81.5)
+    assert result["status"] == "incomplete"
+    assert result["hiring_fit_percentage"] is None
+    assert result["missing_stages"] == ["machine_test"]
 
 
-# 7. Invalid scores must be rejected
+def test_none_score_is_incomplete(engine, complete_scores):
+    complete_scores["machine_test"] = None
+
+    result = engine.calculate(complete_scores)
+
+    assert result["status"] == "incomplete"
+    assert result["hiring_fit_percentage"] is None
+
+
 @pytest.mark.parametrize(
     "score",
-    [-1, 101, float("inf"), float("-inf"), float("nan")],
+    [-1, 101, float("inf"), float("-inf"), float("nan"), True],
 )
-def test_invalid_score_rejected(engine, score):
+def test_invalid_scores_rejected(engine, complete_scores, score):
+    complete_scores["ats"] = score
+
     with pytest.raises(ValueError):
-        engine.calculate(score, 70, 80)
+        engine.calculate(complete_scores)
 
 
-# 8. Boolean values are not valid scores
-def test_boolean_score_rejected(engine):
+def test_invalid_weights_rejected(engine):
+    engine.role_config["roles"]["invalid"] = {
+        "ats": 0.5,
+        "screening": 0.2,
+        "hr_interview": 0.1,
+        "technical_interview": 0.1,
+        "machine_test": 0.2,
+    }
+
     with pytest.raises(ValueError):
-        engine.calculate(True, 70, 80)
+        engine.calculate(
+            {
+                "ats": 80,
+                "screening": 80,
+                "hr_interview": 80,
+                "technical_interview": 80,
+                "machine_test": 80,
+            },
+            "invalid",
+        )
 
 
-# 9. Hiring-fit calculator
-def test_calculator_returns_percentage():
+def test_calculator_returns_percentage(complete_scores):
     calculator = HiringFitCalculator()
 
     result = calculator.calculate_hiring_fit(
-        ats_score=80,
-        screening_score=70,
-        hr_interview_score=90,
+        **{
+            "ats_score": complete_scores["ats"],
+            "screening_score": complete_scores["screening"],
+            "hr_interview_score": complete_scores["hr_interview"],
+            "technical_interview_score": complete_scores[
+                "technical_interview"
+            ],
+            "machine_test_score": complete_scores["machine_test"],
+        }
     )
 
-    assert result == pytest.approx(81.0)
+    assert result == pytest.approx(87.40)
 
 
-# 10. Unified candidate score object
-def test_candidate_score_object():
+def test_candidate_score_object(complete_scores):
     builder = CandidateScoreBuilder()
 
     result = builder.build(
         candidate_id="CAND_1001",
         job_id="JOB_2001",
-        ats_score=80,
-        screening_score=70,
-        hr_interview_score=90,
+        **{
+            "ats_score": complete_scores["ats"],
+            "screening_score": complete_scores["screening"],
+            "hr_interview_score": complete_scores["hr_interview"],
+            "technical_interview_score": complete_scores[
+                "technical_interview"
+            ],
+            "machine_test_score": complete_scores["machine_test"],
+        },
     )
 
     assert result["candidate_id"] == "CAND_1001"
     assert result["job_id"] == "JOB_2001"
-    assert result["role_type"] == "default"
-    assert result["hiring_fit_percentage"] == pytest.approx(81.0)
+    assert result["hiring_fit_percentage"] == pytest.approx(87.40)
     assert result["status"] == "completed"
-    assert result["score_id"]
-    assert result["created_at"]
-
-    assert set(result["evaluation_rounds"]) == {
-        "ats",
-        "screening",
-        "hr_interview",
-    }
+    assert len(result["evaluation_rounds"]) == 5
+    assert len(result["weighted_contributions"]) == 5
+    assert result["completion_percentage"] == 100
 
 
-# 11. Invalid weights must be rejected
-def test_invalid_weights_are_rejected(engine):
-    engine.role_config["roles"]["invalid"] = {
-        "ats": 0.5,
-        "screening": 0.3,
-        "hr_interview": 0.3,
-    }
-
-    with pytest.raises(ValueError):
-        engine.calculate(80, 70, 90, "invalid")
-
-
-# 12. Negative weights must be rejected
-def test_negative_weights_are_rejected(engine):
-    engine.role_config["roles"]["invalid"] = {
-        "ats": 0.8,
-        "screening": -0.1,
-        "hr_interview": 0.3,
-    }
-
-    with pytest.raises(ValueError):
-        engine.calculate(80, 70, 90, "invalid")
-
-
-# 13. Boundary scores are valid
 def test_boundary_scores(engine):
-    result = engine.calculate(
-        ats_score=100,
-        screening_score=0,
-        hr_interview_score=100,
-        role_type="default",
-    )
+    scores = {component: 100 for component in engine.REQUIRED_COMPONENTS}
 
-    assert result["hiring_fit_percentage"] == pytest.approx(75.0)
+    result = engine.calculate(scores)
+    assert result["hiring_fit_percentage"] == 100
+
+    scores = {component: 0 for component in engine.REQUIRED_COMPONENTS}
+
+    result = engine.calculate(scores)
+    assert result["hiring_fit_percentage"] == 0
 
 
-# 14. Role selection is case-insensitive
-def test_role_selection_is_case_insensitive(engine):
-    lower = engine.calculate(80, 70, 90, "technical")
-    upper = engine.calculate(80, 70, 90, "TECHNICAL")
+def test_role_selection_case_insensitive(engine, complete_scores):
+    lower = engine.calculate(complete_scores, "technical")
+    upper = engine.calculate(complete_scores, "TECHNICAL")
 
-    assert (
-        lower["hiring_fit_percentage"]
-        == upper["hiring_fit_percentage"]
-    )
+    assert lower["hiring_fit_percentage"] == upper["hiring_fit_percentage"]

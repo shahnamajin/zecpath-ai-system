@@ -1,9 +1,11 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "default_weights": {
-    "ats": 0.40,
-    "screening": 0.25,
-    "hr_interview": 0.35
+    "ats": 0.20,
+    "screening": 0.15,
+    "hr_interview": 0.20,
+    "technical_interview": 0.25,
+    "machine_test": 0.20
   },
   "score_range": {
     "minimum": 0,
