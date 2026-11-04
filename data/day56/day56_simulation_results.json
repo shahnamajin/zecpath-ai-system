@@ -1,0 +1,550 @@
+{
+  "report_type": "day56_full_system_simulation",
+  "report_version": "1.0",
+  "generated_at": "2026-11-04T07:31:29.046126+00:00",
+  "candidate": {
+    "candidate_id": "C001",
+    "name": "Arjun Menon",
+    "job_id": "JOB-1001",
+    "job_title": "Backend Python Developer",
+    "resume_source": "data\\parsed_resumes\\arjun.json"
+  },
+  "stages": {
+    "ats": {
+      "score": 46,
+      "recommendation": "Reject",
+      "engine_report": {
+        "candidate_id": "C001",
+        "job_id": "JOB-1001",
+        "scores": {
+          "skills": 16,
+          "education": 20,
+          "projects": 0,
+          "experience": 10,
+          "certifications": 0
+        },
+        "overall_score": 46,
+        "matched_skills": [
+          "python",
+          "django"
+        ],
+        "missing_skills": [
+          "sql",
+          "git",
+          "rest apis"
+        ],
+        "recommendation": "Reject",
+        "score_breakdown": {
+          "skills": "2/5 required skills matched.",
+          "education": "Education details found.",
+          "projects": "0 project(s) identified.",
+          "experience": "Professional experience found.",
+          "certifications": "0 certification(s) identified."
+        },
+        "ai_metadata": {
+          "model": "ATS Scorer V2",
+          "version": "2.0",
+          "processed_at": "2026-11-04T13:01:29.047127"
+        }
+      },
+      "input_provenance": "Existing parsed resume mapped to ATS input schema"
+    },
+    "screening": {
+      "score": 90.75,
+      "engine_report": {
+        "candidate_id": "C001",
+        "job_id": "JOB-1001",
+        "question_scores": [
+          {
+            "candidate_id": "C001",
+            "job_id": "JOB-1001",
+            "question_id": "DAY56-SAMPLE-SCREENING-001",
+            "question_category": "skills",
+            "scores": {
+              "clarity": 85.0,
+              "relevance": 95.0,
+              "completeness": 100.0,
+              "consistency": 80.0,
+              "total_score": 90.75
+            },
+            "explanation": [
+              "The candidate communicated the answer clearly.",
+              "The response was relevant to the question.",
+              "The response contained sufficient information.",
+              "The response was consistent with the available candidate information."
+            ]
+          }
+        ],
+        "final_screening_score": 90.75,
+        "score_summary": {
+          "total_questions": 1,
+          "average_score": 90.75,
+          "normalized_score": 90.75
+        }
+      },
+      "input_provenance": "Sample structured answer supplied to the existing rule-based screening engine"
+    },
+    "hr_interview": {
+      "pipeline_score": 88.0,
+      "pipeline_fixture": {
+        "session_id": "SIM_001",
+        "candidate_id": "CAND_CONFIDENT",
+        "candidate_type": "confident",
+        "ai_score": 88.0,
+        "ai_decision": "continue",
+        "communication": 90.0,
+        "confidence": 92.0,
+        "consistency": 89.0,
+        "aptitude_logic": 82.0,
+        "response_count": 2
+      },
+      "all_session_count": 8,
+      "manual_comparison": [
+        {
+          "session_id": "SIM_001",
+          "candidate_id": "CAND_CONFIDENT",
+          "candidate_type": "confident",
+          "ai_score": 88.0,
+          "ai_decision": "continue",
+          "communication": 90.0,
+          "confidence": 92.0,
+          "consistency": 89.0,
+          "aptitude_logic": 82.0,
+          "response_count": 2,
+          "manual_score": 88.0,
+          "manual_decision": "continue",
+          "score_difference": 0.0,
+          "within_score_tolerance": true,
+          "decision_agreement": true
+        },
+        {
+          "session_id": "SIM_002",
+          "candidate_id": "CAND_HESITANT",
+          "candidate_type": "hesitant",
+          "ai_score": 67.0,
+          "ai_decision": "clarify",
+          "communication": 62.0,
+          "confidence": 55.0,
+          "consistency": 80.0,
+          "aptitude_logic": 68.0,
+          "response_count": 2,
+          "manual_score": 70.0,
+          "manual_decision": "clarify",
+          "score_difference": -3.0,
+          "within_score_tolerance": true,
+          "decision_agreement": true
+        },
+        {
+          "session_id": "SIM_003",
+          "candidate_id": "CAND_INEXPERIENCED",
+          "candidate_type": "inexperienced",
+          "ai_score": 54.0,
+          "ai_decision": "review",
+          "communication": 72.0,
+          "confidence": 58.0,
+          "consistency": 91.0,
+          "aptitude_logic": 65.0,
+          "response_count": 2,
+          "manual_score": 58.0,
+          "manual_decision": "clarify",
+          "score_difference": -4.0,
+          "within_score_tolerance": true,
+          "decision_agreement": false
+        },
+        {
+          "session_id": "SIM_004",
+          "candidate_id": "CAND_OVERQUALIFIED",
+          "candidate_type": "overqualified",
+          "ai_score": 91.0,
+          "ai_decision": "continue",
+          "communication": 94.0,
+          "confidence": 93.0,
+          "consistency": 90.0,
+          "aptitude_logic": 88.0,
+          "response_count": 2,
+          "manual_score": 78.0,
+          "manual_decision": "clarify",
+          "score_difference": 13.0,
+          "within_score_tolerance": false,
+          "decision_agreement": false
+        },
+        {
+          "session_id": "SIM_005",
+          "candidate_id": "CAND_CONFIDENT_2",
+          "candidate_type": "confident",
+          "ai_score": 84.0,
+          "ai_decision": "continue",
+          "communication": 86.0,
+          "confidence": 89.0,
+          "consistency": 85.0,
+          "aptitude_logic": 78.0,
+          "response_count": 1,
+          "manual_score": 83.0,
+          "manual_decision": "continue",
+          "score_difference": 1.0,
+          "within_score_tolerance": true,
+          "decision_agreement": true
+        },
+        {
+          "session_id": "SIM_006",
+          "candidate_id": "CAND_HESITANT_2",
+          "candidate_type": "hesitant",
+          "ai_score": 61.0,
+          "ai_decision": "clarify",
+          "communication": 58.0,
+          "confidence": 49.0,
+          "consistency": 74.0,
+          "aptitude_logic": 63.0,
+          "response_count": 1,
+          "manual_score": 64.0,
+          "manual_decision": "clarify",
+          "score_difference": -3.0,
+          "within_score_tolerance": true,
+          "decision_agreement": true
+        },
+        {
+          "session_id": "SIM_007",
+          "candidate_id": "CAND_INEXPERIENCED_2",
+          "candidate_type": "inexperienced",
+          "ai_score": 49.0,
+          "ai_decision": "review",
+          "communication": 69.0,
+          "confidence": 52.0,
+          "consistency": 86.0,
+          "aptitude_logic": 60.0,
+          "response_count": 1,
+          "manual_score": 52.0,
+          "manual_decision": "clarify",
+          "score_difference": -3.0,
+          "within_score_tolerance": true,
+          "decision_agreement": false
+        },
+        {
+          "session_id": "SIM_008",
+          "candidate_id": "CAND_OVERQUALIFIED_2",
+          "candidate_type": "overqualified",
+          "ai_score": 87.0,
+          "ai_decision": "continue",
+          "communication": 91.0,
+          "confidence": 90.0,
+          "consistency": 88.0,
+          "aptitude_logic": 84.0,
+          "response_count": 1,
+          "manual_score": 75.0,
+          "manual_decision": "clarify",
+          "score_difference": 12.0,
+          "within_score_tolerance": false,
+          "decision_agreement": false
+        }
+      ],
+      "evaluation_metrics": {
+        "session_count": 8,
+        "decision_accuracy": 50.0,
+        "score_within_tolerance": 75.0,
+        "mean_absolute_score_difference": 4.88,
+        "decision_disagreements": 4
+      },
+      "inconsistencies": [
+        {
+          "session_id": "SIM_003",
+          "candidate_type": "inexperienced",
+          "issue": "AI and manual decision differ",
+          "ai_decision": "review",
+          "manual_decision": "clarify",
+          "score_difference": -4.0
+        },
+        {
+          "session_id": "SIM_004",
+          "candidate_type": "overqualified",
+          "issue": "AI and manual decision differ",
+          "ai_decision": "continue",
+          "manual_decision": "clarify",
+          "score_difference": 13.0
+        },
+        {
+          "session_id": "SIM_004",
+          "candidate_type": "overqualified",
+          "issue": "AI and manual scores exceed configured tolerance",
+          "ai_score": 91.0,
+          "manual_score": 78.0,
+          "score_difference": 13.0
+        },
+        {
+          "session_id": "SIM_007",
+          "candidate_type": "inexperienced",
+          "issue": "AI and manual decision differ",
+          "ai_decision": "review",
+          "manual_decision": "clarify",
+          "score_difference": -3.0
+        },
+        {
+          "session_id": "SIM_008",
+          "candidate_type": "overqualified",
+          "issue": "AI and manual decision differ",
+          "ai_decision": "continue",
+          "manual_decision": "clarify",
+          "score_difference": 12.0
+        },
+        {
+          "session_id": "SIM_008",
+          "candidate_type": "overqualified",
+          "issue": "AI and manual scores exceed configured tolerance",
+          "ai_score": 87.0,
+          "manual_score": 75.0,
+          "score_difference": 12.0
+        }
+      ],
+      "recommendations": [
+        "Review decision thresholds and add candidate-type context before final decisions.",
+        "Add a role-alignment and overqualification review signal rather than relying only on score."
+      ],
+      "input_provenance": "Predefined HR simulation fixture SIM_001; not a real interview record for C001"
+    },
+    "technical_interview": {
+      "score": 75.0,
+      "engine_report": {
+        "report_type": "technical_interview_evaluation",
+        "report_version": "1.0",
+        "candidate_id": "C001",
+        "job_id": "JOB-1001",
+        "session_id": "DAY56-TECH-SAMPLE-SESSION",
+        "role_id": "backend_developer",
+        "experience_years": 0,
+        "overall_score": 75.0,
+        "question_count": 1,
+        "skill_wise_breakdown": {
+          "python": {
+            "question_count": 1,
+            "average_score": 75.0,
+            "minimum_score": 75.0,
+            "maximum_score": 75.0
+          }
+        },
+        "answer_depth_summary": {
+          "shallow": 0,
+          "developing": 0,
+          "deep": 1
+        },
+        "question_evaluations": [
+          {
+            "question_id": "DAY56-TECH-SAMPLE-001",
+            "skill_domain": "python",
+            "section": "conceptual",
+            "question_type": "conceptual",
+            "difficulty": "easy",
+            "dimension_scores": {
+              "accuracy": 3.0,
+              "depth": 3.0,
+              "logical_reasoning": 3.0,
+              "real_world_applicability": 3.0
+            },
+            "dimension_breakdown": [
+              {
+                "dimension": "accuracy",
+                "rating": 3.0,
+                "weight": 0.4,
+                "weighted_contribution": 30.0,
+                "assessment": "good",
+                "evidence_note": "Sample evaluator rating"
+              },
+              {
+                "dimension": "depth",
+                "rating": 3.0,
+                "weight": 0.3,
+                "weighted_contribution": 22.5,
+                "assessment": "good",
+                "evidence_note": "Sample evaluator rating"
+              },
+              {
+                "dimension": "logical_reasoning",
+                "rating": 3.0,
+                "weight": 0.2,
+                "weighted_contribution": 15.0,
+                "assessment": "good",
+                "evidence_note": "Sample evaluator rating"
+              },
+              {
+                "dimension": "real_world_applicability",
+                "rating": 3.0,
+                "weight": 0.1,
+                "weighted_contribution": 7.5,
+                "assessment": "good",
+                "evidence_note": "Sample evaluator rating"
+              }
+            ],
+            "evidence_coverage": 0.75,
+            "answer_depth": "deep",
+            "raw_score": 75.0,
+            "normalized_score": 75.0,
+            "normalization_note": "Criterion scores are rated against the expectation for the question difficulty, then weighted to a 0-100 question score. Skill scores are weighted averages of normalized question scores. Do not apply a blanket bonus or penalty solely because a question is hard.",
+            "difficulty_expectation": {
+              "expected_depth": "Explain the core concept accurately and give a simple example where relevant.",
+              "expected_reasoning": "A clear, basic explanation or sequence."
+            },
+            "evidence_notes": {
+              "accuracy": "Sample evaluator rating",
+              "depth": "Sample evaluator rating",
+              "logical_reasoning": "Sample evaluator rating",
+              "real_world_applicability": "Sample evaluator rating"
+            },
+            "evaluator": {
+              "id": "DAY56_SAMPLE_EVALUATOR",
+              "version": "1.0"
+            },
+            "scored_at": "2026-11-04T07:31:29.048126+00:00"
+          }
+        ],
+        "evaluator_summary": {
+          "source": "Sample evaluator-provided dimension ratings"
+        },
+        "decision_status": "human_review_required",
+        "limitations": [
+          "Scores depend on the validity and consistency of the supplied dimension ratings.",
+          "This report is an evaluation aid and does not make an autonomous hiring decision."
+        ],
+        "generated_at": "2026-11-04T07:31:29.048126+00:00"
+      },
+      "input_provenance": "Sample evaluator-provided ratings; not autonomous raw-answer evaluation"
+    },
+    "machine_test": {
+      "score": 75.0,
+      "task_type": "coding",
+      "dimension_ratings": {
+        "correctness": 3,
+        "efficiency": 3,
+        "code_quality": 3,
+        "problem_solving": 3
+      },
+      "weights": {
+        "correctness": 0.4,
+        "efficiency": 0.2,
+        "code_quality": 0.2,
+        "problem_solving": 0.2
+      },
+      "rubric_version": "1.0",
+      "rubric_status": "design_only_unvalidated",
+      "input_provenance": "Sample evaluator-provided ratings calculated using the design-only machine-test rubric; no coding task executed"
+    }
+  },
+  "unified_scores": {
+    "ats": 46,
+    "screening": 90.75,
+    "hr_interview": 88.0,
+    "technical_interview": 75.0,
+    "machine_test": 75.0
+  },
+  "unified_result": {
+    "scores": {
+      "ats": 46.0,
+      "screening": 90.75,
+      "hr_interview": 88.0,
+      "technical_interview": 75.0,
+      "machine_test": 75.0
+    },
+    "weights": {
+      "ats": 0.2,
+      "screening": 0.15,
+      "hr_interview": 0.15,
+      "technical_interview": 0.3,
+      "machine_test": 0.2
+    },
+    "weighted_contributions": {
+      "ats": 9.2,
+      "screening": 13.61,
+      "hr_interview": 13.2,
+      "technical_interview": 22.5,
+      "machine_test": 15.0
+    },
+    "hiring_fit_percentage": 73.51,
+    "role_type": "technical",
+    "missing_stages": [],
+    "completed_stages": [
+      "ats",
+      "hr_interview",
+      "machine_test",
+      "screening",
+      "technical_interview"
+    ],
+    "completion_percentage": 100.0,
+    "status": "completed"
+  },
+  "final_recommendation": {
+    "recommendation": "hold_review",
+    "recommendation_label": "Hold / Review",
+    "hiring_fit_score": 73.51,
+    "confidence_score": 86.49,
+    "evaluation_status": "completed",
+    "missing_stages": [],
+    "risk_factors": [],
+    "reasons": [
+      "Hiring Fit Score 73.51 falls in the review range."
+    ],
+    "review_reasons": [],
+    "requires_human_review": true,
+    "decision_type": "AI recommendation"
+  },
+  "incomplete_evaluation_test": {
+    "unified_result": {
+      "scores": {
+        "ats": 80.0,
+        "screening": 75.0,
+        "hr_interview": 82.0,
+        "technical_interview": 78.0
+      },
+      "weights": {
+        "ats": 0.2,
+        "screening": 0.15,
+        "hr_interview": 0.2,
+        "technical_interview": 0.25,
+        "machine_test": 0.2
+      },
+      "weighted_contributions": {},
+      "hiring_fit_percentage": null,
+      "role_type": "default",
+      "missing_stages": [
+        "machine_test"
+      ],
+      "completed_stages": [
+        "ats",
+        "hr_interview",
+        "screening",
+        "technical_interview"
+      ],
+      "completion_percentage": 80.0,
+      "status": "incomplete"
+    },
+    "recommendation": {
+      "recommendation": "hold_review",
+      "recommendation_label": "Hold / Review",
+      "hiring_fit_score": null,
+      "confidence_score": 40.0,
+      "evaluation_status": "incomplete",
+      "missing_stages": [
+        "machine_test"
+      ],
+      "risk_factors": [],
+      "reasons": [
+        "Candidate evaluation is incomplete."
+      ],
+      "review_reasons": [
+        "Complete all required evaluation stages."
+      ],
+      "requires_human_review": true,
+      "decision_type": "AI recommendation"
+    },
+    "passed": true
+  },
+  "performance": {
+    "total_execution_time_ms": 3.059,
+    "measurement": "Single local execution; not a load test"
+  },
+  "limitations": [
+    "The HR session is a predefined fixture and is not a real interview for candidate C001.",
+    "HR manual comparisons use stored dataset judgments, not newly collected independent human evaluations.",
+    "Technical scores are sample evaluator-provided ratings.",
+    "Machine-test score is a sample calculation; no coding task was executed.",
+    "The machine-test rubric is design-only and unvalidated.",
+    "ATS score uses the available parsed resume fields; missing projects and certifications are treated as empty lists.",
+    "This simulation is not evidence of production readiness or validated hiring accuracy."
+  ]
+}
