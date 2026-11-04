@@ -102,3 +102,18 @@ def test_invalid_score_rejected(engine, completed_candidate):
 
     with pytest.raises(ValueError):
         engine.recommend(completed_candidate)
+@pytest.mark.parametrize(
+    "invalid_score",
+    [
+        float("nan"),
+        float("inf"),
+        float("-inf"),
+    ],
+)
+def test_non_finite_score_rejected(
+    engine, completed_candidate, invalid_score
+):
+    completed_candidate["hiring_fit_percentage"] = invalid_score
+
+    with pytest.raises(ValueError):
+        engine.recommend(completed_candidate)

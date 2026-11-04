@@ -1,3 +1,4 @@
+
 import re
 
 
@@ -5,8 +6,13 @@ class IntentClassifier:
     """
     Rule-based intent classifier for Zecpath HR screening.
 
-    The classifier identifies the semantic intent of a candidate's
-    response using question context and keyword matching.
+    Features:
+    - Context-aware classification
+    - Keyword-based intent scoring
+    - Multiple keyword detection
+    - Deterministic tie-breaking
+    - Missing and vague answer detection
+    - Short-answer fallback
     """
 
     INTENTS = {
@@ -149,128 +155,134 @@ class IntentClassifier:
         "dont know",
     }
 
+    # Explicit order used only when two intents have equal scores.
+    INTENT_PRIORITY = [
+        "introduction",
+        "education",
+        "experience",
+        "skills",
+        "availability",
+        "salary_expectation",
+        "location",
+    ]
+
     def normalize(self, text):
-        """
-        Normalize input text.
-        """
+        """Normalize candidate response text."""
 
         if text is None:
             return ""
 
-        text = text.lower().strip()
+        if not isinstance(text, str):
+            raise ValueError("Candidate response must be a string.")
 
-        # Normalize whitespace
+        text = text.lower().strip()
         text = re.sub(r"\s+", " ", text)
 
         return text
 
     def keyword_matches(self, text, keyword):
         """
-        Safely check whether a keyword or phrase exists.
+        Match complete words or phrases.
 
-        Multi-word phrases are searched normally.
-        Single words use word boundaries so that words such as
-        'day' do not match inside unrelated words.
+        Word boundaries prevent matches such as 'day'
+        inside unrelated words.
         """
 
         keyword = keyword.lower().strip()
 
-        if " " in keyword:
-            return keyword in text
+        if not keyword:
+            return False
 
-        pattern = r"\b" + re.escape(keyword) + r"\b"
+        if " " in keyword:
+            pattern = (
+                r"(?<!\w)"
+                + re.escape(keyword)
+                + r"(?!\w)"
+            )
+        else:
+            pattern = r"\b" + re.escape(keyword) + r"\b"
 
         return re.search(pattern, text) is not None
+
+    def calculate_intent_scores(self, normalized):
+        """
+        Calculate keyword match scores for every supported
+        question-answer category.
+
+        Each matched keyword contributes one point.
+        """
+
+        scores = {}
+
+        for intent, keywords in self.KEYWORDS.items():
+
+            matched_keywords = []
+
+            for keyword in keywords:
+
+                if self.keyword_matches(normalized, keyword):
+                    matched_keywords.append(keyword)
+
+            scores[intent] = {
+                "score": len(matched_keywords),
+                "matched_keywords": matched_keywords,
+            }
+
+        return scores
 
     def classify(self, text, question_category=None):
         """
         Classify a candidate answer.
 
         Priority:
-        1. Missing
-        2. Vague
+        1. Missing answer
+        2. Vague answer
         3. Question-category context
-        4. General keyword matching
+        4. General keyword scoring
         5. Short-answer fallback
         6. Off-topic
         """
 
         normalized = self.normalize(text)
 
-        # --------------------------------------------------
         # 1. Missing answer
-        # --------------------------------------------------
-
         if not normalized:
             return "missing"
 
-        # --------------------------------------------------
         # 2. Vague answer
-        # --------------------------------------------------
-
         if normalized in self.VAGUE_RESPONSES:
             return "vague"
 
-        # --------------------------------------------------
-        # 3. Context-aware classification
-        # --------------------------------------------------
+        # 3. Calculate all intent scores
+        intent_scores = self.calculate_intent_scores(normalized)
 
-        if question_category in self.INTENTS:
+        # 4. Question-category context
+        if question_category in self.KEYWORDS:
 
-            category_keywords = self.KEYWORDS.get(
-                question_category,
-                []
-            )
+            context_score = intent_scores[question_category]["score"]
 
-            for keyword in category_keywords:
+            # Give priority to the requested question category
+            # when the answer contains evidence for that category.
+            if context_score > 0:
+                return question_category
 
-                if self.keyword_matches(
-                    normalized,
-                    keyword
-                ):
-                    return question_category
-
-        # --------------------------------------------------
-        # 4. General keyword scoring
-        # --------------------------------------------------
-
-        scores = {}
-
-        for intent, keywords in self.KEYWORDS.items():
-
-            score = 0
-
-            for keyword in keywords:
-
-                if self.keyword_matches(
-                    normalized,
-                    keyword
-                ):
-                    score += 1
-
-            scores[intent] = score
-
-        best_intent = max(
-            scores,
-            key=scores.get
+        # 5. General keyword scoring
+        best_score = max(
+            item["score"]
+            for item in intent_scores.values()
         )
 
-        # --------------------------------------------------
-        # 5. Known intent found
-        # --------------------------------------------------
+        if best_score > 0:
 
-        if scores[best_intent] > 0:
-            return best_intent
+            # Resolve ties using an explicit priority order.
+            for intent in self.INTENT_PRIORITY:
 
-        # --------------------------------------------------
+                if intent_scores[intent]["score"] == best_score:
+                    return intent
+
         # 6. Short answer without useful information
-        # --------------------------------------------------
-
         if len(normalized.split()) < 4:
             return "vague"
 
-        # --------------------------------------------------
-        # 7. Nothing matches
-        # --------------------------------------------------
-
+        # 7. No matching intent
         return "off_topic"

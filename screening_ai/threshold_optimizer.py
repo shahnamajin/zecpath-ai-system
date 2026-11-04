@@ -1,8 +1,19 @@
+
+import math
 from typing import Dict
 
 
 class ThresholdOptimizer:
-    """Apply configurable screening decision thresholds."""
+    """
+    Apply validated screening decision thresholds.
+
+    Decisions:
+        - continue: Score meets continuation threshold.
+        - clarify: Response needs clarification.
+        - retry: Response should be submitted again.
+
+    The optimizer does not automatically reject candidates.
+    """
 
     def __init__(
         self,
@@ -11,9 +22,55 @@ class ThresholdOptimizer:
         retry_score: float = 20,
     ):
 
-        self.continue_score = continue_score
-        self.clarify_score = clarify_score
-        self.retry_score = retry_score
+        self._validate_threshold(
+            "continue_score", continue_score
+        )
+        self._validate_threshold(
+            "clarify_score", clarify_score
+        )
+        self._validate_threshold(
+            "retry_score", retry_score
+        )
+
+        if not (
+            retry_score <= clarify_score <= continue_score
+        ):
+            raise ValueError(
+                "Thresholds must satisfy: "
+                "retry_score <= clarify_score <= continue_score."
+            )
+
+        self.continue_score = float(continue_score)
+        self.clarify_score = float(clarify_score)
+        self.retry_score = float(retry_score)
+
+    @staticmethod
+    def _validate_threshold(name: str, value: float) -> None:
+        """Validate a threshold as a finite number from 0 to 100."""
+
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            raise ValueError(
+                f"{name} must be a numeric value."
+            )
+
+        if not math.isfinite(value) or not 0 <= value <= 100:
+            raise ValueError(
+                f"{name} must be between 0 and 100."
+            )
+
+    @staticmethod
+    def _validate_score(score: float) -> None:
+        """Validate candidate screening score."""
+
+        if isinstance(score, bool) or not isinstance(score, (int, float)):
+            raise ValueError(
+                "Candidate score must be numeric."
+            )
+
+        if not math.isfinite(score) or not 0 <= score <= 100:
+            raise ValueError(
+                "Candidate score must be a finite number between 0 and 100."
+            )
 
     def decide(
         self,
@@ -23,33 +80,41 @@ class ThresholdOptimizer:
         is_off_topic: bool = False,
         is_vague: bool = False,
     ) -> Dict[str, object]:
+        """
+        Determine the next screening action.
 
-        # Missing answers should be retried
-        if is_missing:
+        Intent-based handling supplements the explicit flags.
+        Explicit flags and special intents take priority over score.
+        """
+
+        # 1. Missing response
+        if is_missing or intent == "missing":
 
             return {
                 "decision": "retry",
                 "reason": "Missing response",
             }
 
-        # Off-topic answers should be clarified
-        if is_off_topic:
+        # 2. Off-topic response
+        if is_off_topic or intent == "off_topic":
 
             return {
                 "decision": "clarify",
                 "reason": "Off-topic response",
             }
 
-        # Vague answers should be clarified
-        if is_vague:
+        # 3. Vague response
+        if is_vague or intent == "vague":
 
             return {
                 "decision": "clarify",
                 "reason": "Vague response",
             }
 
-        # Relevant answers should not be
-        # rejected only because of a low score.
+        # 4. Validate score before applying thresholds
+        self._validate_score(score)
+
+        # 5. Score meets continuation threshold
         if score >= self.continue_score:
 
             return {
@@ -57,6 +122,7 @@ class ThresholdOptimizer:
                 "reason": "Score meets continuation threshold",
             }
 
+        # 6. Score requires clarification
         if score >= self.clarify_score:
 
             return {
@@ -64,6 +130,7 @@ class ThresholdOptimizer:
                 "reason": "Score requires clarification",
             }
 
+        # 7. Low-quality response requires retry
         if score >= self.retry_score:
 
             return {
@@ -71,6 +138,8 @@ class ThresholdOptimizer:
                 "reason": "Low-quality response",
             }
 
+        # 8. Conservative fallback
+        # Never automatically reject a candidate.
         return {
             "decision": "clarify",
             "reason": (
