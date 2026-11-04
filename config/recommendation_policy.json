@@ -1,0 +1,24 @@
+{
+  "decision_thresholds": {
+    "selected_min": 80,
+    "hold_min": 60
+  },
+  "confidence": {
+    "base_score": 60,
+    "complete_evaluation_bonus": 20,
+    "maximum_margin_bonus": 20,
+    "unresolved_integrity_penalty": 15,
+    "maximum_integrity_penalty": 30
+  },
+  "risk_policy": {
+    "behavior": {
+      "affects_hiring_score": false,
+      "requires_human_review": true
+    },
+    "integrity": {
+      "unresolved_medium_or_high_requires_review": true,
+      "confirmed_concern_requires_review": true,
+      "automatic_rejection": false
+    }
+  }
+}
